@@ -4,8 +4,9 @@
 public class TemplatesController : Controller
 {
     readonly TemplatesContext _context;
-    public TemplatesController(TemplatesContext context)
-        => _context = context;
+    readonly IWebHostEnvironment _environment;
+    public TemplatesController(TemplatesContext context, IWebHostEnvironment environment)
+        => (_context,_environment) = (context,environment);
 
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Template>>> Get()
@@ -18,6 +19,7 @@ public class TemplatesController : Controller
         return Ok(template);
     }
     [HttpPost]
+    
     public async Task<IActionResult> Post(Template template)
     {
         if (template != null)
