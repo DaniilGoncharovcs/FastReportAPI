@@ -20,23 +20,29 @@ public class TemplatesController : Controller
     }
     [HttpPost]
     
-    public async Task<IActionResult> Post(Template template)
+    public async Task<IActionResult> Post(TemplateViewModel template)
     {
         if (template != null)
         {
-            await _context.AddAsync(template);
+            var dbtemplate = new Template
+            {
+                Name = template.Name,
+                Path = template.Path
+            };
+            await _context.AddAsync(dbtemplate);
             await _context.SaveChangesAsync();
             return Ok();
         }
         return BadRequest();
     }
     [HttpPut("{id}")]
-    public async Task<IActionResult> Update(int id, Template template)
+    public async Task<IActionResult> Update(int id, TemplateViewModel template)
     {
         var dbTemplate = await _context.Templates.FirstOrDefaultAsync(t => t.Id == id);
         if (dbTemplate == null) return NotFound("Такого шаблона нет");
         if (template != null)
         {
+            dbTemplate.Name = template.Name;
             dbTemplate.Path = template.Path;
             await _context.SaveChangesAsync();
             return Ok();

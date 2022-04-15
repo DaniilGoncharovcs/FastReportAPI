@@ -11,6 +11,7 @@ public class TemplatesContext : DbContext
             new Template
             {
                 Id = 1,
+                Name = "Box",
                 Path = "../wwwroot/template1"
             }
             );

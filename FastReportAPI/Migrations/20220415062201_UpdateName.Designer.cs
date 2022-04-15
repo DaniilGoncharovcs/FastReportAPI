@@ -2,6 +2,7 @@
 using FastReportAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FastReportAPI.Migrations
 {
     [DbContext(typeof(TemplatesContext))]
-    partial class TemplatesContextModelSnapshot : ModelSnapshot
+    [Migration("20220415062201_UpdateName")]
+    partial class UpdateName
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
