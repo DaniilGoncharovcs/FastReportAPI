@@ -11,6 +11,7 @@ builder.Services.AddDbContext<TemplatesContext>(options =>
     var connection = builder.Configuration.GetConnectionString("DefaultConnection");
     options.UseMySql(connection, ServerVersion.AutoDetect(connection));
 });
+builder.Services.AddTransient<IFastReportService,FastReportService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

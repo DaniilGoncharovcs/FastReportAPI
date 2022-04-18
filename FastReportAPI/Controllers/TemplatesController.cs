@@ -1,12 +1,15 @@
-﻿namespace FastReportAPI.Controllers;
+﻿using Microsoft.AspNetCore.StaticFiles;
+
+namespace FastReportAPI.Controllers;
 [ApiController]
 [Route("api/[controller]")]
 public class TemplatesController : Controller
 {
     readonly TemplatesContext _context;
     readonly IWebHostEnvironment _environment;
-    public TemplatesController(TemplatesContext context, IWebHostEnvironment environment)
-        => (_context,_environment) = (context,environment);
+    readonly IFastReportService _fastReportService;
+    public TemplatesController(TemplatesContext context, IWebHostEnvironment environment, IFastReportService service)
+        => (_context,_environment,_fastReportService) = (context,environment,service);
 
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Template>>> Get()
@@ -58,4 +61,47 @@ public class TemplatesController : Controller
         await _context.SaveChangesAsync();
         return Ok();
     }
+    [HttpPost("[action]")]
+    public async Task<IActionResult> UploadFile(IFormFile file)
+    {
+        if (file == null) return BadRequest();
+        string dir = Path.Combine(_environment.ContentRootPath, "Templates");
+        string filePath = Path.Combine(dir, file.FileName);
+        using (var stream = new FileStream(filePath, FileMode.Create))
+        {
+            file.CopyTo(stream);
+        }
+        return Ok("Upload Successful");
+    }
+    [HttpGet("[action]")]
+    public async Task<IActionResult> DownloadFile(int id, [FromQuery] Dictionary<string, string> dictionary, string format)
+    {
+        var template = await _context.Templates.FirstOrDefaultAsync(t => t.Id == id);
+        if (template == null) return NotFound("Шаблона с таким id нет");
+
+        var filePath = Path.Combine($"{_environment.ContentRootPath}{template.Path}");
+        filePath = _fastReportService.FillReport(dictionary,filePath,format);
+
+        var provider = new FileExtensionContentTypeProvider();
+        if (!provider.TryGetContentType(filePath, out var contentType))
+        {
+            contentType = "application/octet-stream";
+        }
+        var bytes = await System.IO.File.ReadAllBytesAsync(filePath);
+        return File(bytes, contentType, Path.GetFileName(filePath));
+    }
+    /*[HttpGet("[action]")]
+    public async Task<IActionResult> DownloadFile()
+    {
+        var filePath = Path.Combine($"{_environment.ContentRootPath}\\test.txt");
+        //filePath = _fastReportService.FillReport(dictionary,filePath,format);
+
+        var provider = new FileExtensionContentTypeProvider();
+        if (!provider.TryGetContentType(filePath, out var contentType))
+        {
+            contentType = "application/octet-stream";
+        }
+        var bytes = await System.IO.File.ReadAllBytesAsync(filePath);
+        return File(bytes, contentType, Path.GetFileName(filePath));
+    }*/
 }

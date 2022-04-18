@@ -30,7 +30,7 @@ namespace FastReportAPI.Migrations
             migrationBuilder.InsertData(
                 table: "templates",
                 columns: new[] { "Id", "Path" },
-                values: new object[] { 1, "../wwwroot/template1.fpx" });
+                values: new object[] { 1, @"\Templates\Акт возобновления качественного предоставления услуг" });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
