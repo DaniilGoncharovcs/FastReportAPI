@@ -63,7 +63,7 @@ public class TemplatesController : Controller
     public async Task<IActionResult> UploadFile(IFormFile file)
     {
         if (file == null) return BadRequest();
-        string dir = Path.Combine(_environment.ContentRootPath, "Templates");
+        string dir = Path.Combine($"{_environment.ContentRootPath}\\wwwroot\\Templates");
         string filePath = Path.Combine(dir, file.FileName);
         using (var stream = new FileStream(filePath, FileMode.Create))
         {
