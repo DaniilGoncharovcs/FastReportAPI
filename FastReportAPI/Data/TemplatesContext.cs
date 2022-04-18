@@ -11,8 +11,8 @@ public class TemplatesContext : DbContext
             new Template
             {
                 Id = 1,
-                Name = "Box",
-                Path = "../wwwroot/template1"
+                Name = "Тестовый шаблон",
+                Path = "\\Акт возобновления качественного предоставления услуг"
             }
             );
     }

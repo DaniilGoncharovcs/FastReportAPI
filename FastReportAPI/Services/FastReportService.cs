@@ -1,11 +1,17 @@
 ﻿namespace FastReportAPI.Services;
 public class FastReportService : IFastReportService
 {
-    public string FillReport(Dictionary<string, string> parametrsList, string path, string format)
+    readonly IWebHostEnvironment _environment;
+
+    public FastReportService(IWebHostEnvironment environment)
+        => _environment = environment;
+
+    public string FillReport(Dictionary<string, string> parametrsList, string filename, string format)
     {
         using (var report = new Report())
         {
-            report.Load($"{path}.frx");
+            var filePath = Path.Combine($"{_environment.ContentRootPath}\\wwwroot\\Templates\\{filename}");
+            report.Load($"{filePath}.frx");
             foreach(var parametr in parametrsList)
                 report.SetParameterValue(parametr.Key, parametr.Value);
             report.Prepare();
@@ -13,9 +19,9 @@ public class FastReportService : IFastReportService
             {
                 case "pdf":
                     PDFSimpleExport pdf = new PDFSimpleExport();
-                    path = $"{path}.{format}";
-                    pdf.Export(report, path);
-                    return path;
+                    filePath = Path.Combine($"{_environment.ContentRootPath}\\wwwroot\\Files\\{filename}.{format}");
+                    pdf.Export(report, filePath);
+                    return filePath;
                     break;
             }
         }

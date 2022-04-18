@@ -40,8 +40,8 @@ namespace FastReportAPI.Migrations
                         new
                         {
                             Id = 1,
-                            Name = "Box",
-                            Path = "../wwwroot/template1"
+                            Name = "Тестовый шаблон",
+                            Path = "\\Акт возобновления качественного предоставления услуг"
                         });
                 });
 #pragma warning restore 612, 618

@@ -33,7 +33,7 @@ namespace FastReportAPI.Migrations
                 keyColumn: "Id",
                 keyValue: 1,
                 column: "Name",
-                value: "Box");
+                value: "Тестовый шаблон");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

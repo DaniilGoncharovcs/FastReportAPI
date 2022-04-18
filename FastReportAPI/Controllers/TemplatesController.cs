@@ -79,7 +79,7 @@ public class TemplatesController : Controller
         var template = await _context.Templates.FirstOrDefaultAsync(t => t.Id == id);
         if (template == null) return NotFound("Шаблона с таким id нет");
 
-        var filePath = Path.Combine($"{_environment.ContentRootPath}{template.Path}");
+        var filePath = template.Path;
         filePath = _fastReportService.FillReport(dictionary,filePath,format);
 
         var provider = new FileExtensionContentTypeProvider();
@@ -90,18 +90,5 @@ public class TemplatesController : Controller
         var bytes = await System.IO.File.ReadAllBytesAsync(filePath);
         return File(bytes, contentType, Path.GetFileName(filePath));
     }
-    /*[HttpGet("[action]")]
-    public async Task<IActionResult> DownloadFile()
-    {
-        var filePath = Path.Combine($"{_environment.ContentRootPath}\\test.txt");
-        //filePath = _fastReportService.FillReport(dictionary,filePath,format);
-
-        var provider = new FileExtensionContentTypeProvider();
-        if (!provider.TryGetContentType(filePath, out var contentType))
-        {
-            contentType = "application/octet-stream";
-        }
-        var bytes = await System.IO.File.ReadAllBytesAsync(filePath);
-        return File(bytes, contentType, Path.GetFileName(filePath));
-    }*/
+    
 }
