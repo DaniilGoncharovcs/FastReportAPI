@@ -10,7 +10,7 @@ WebApi, которое позволяет получить из данных и 
 
 - Таблица ***templates*** хранит id, путь к шаблону и его название. При инициализации БД в нее уже добавляется следующее значение:
 
-![image](https://user-images.githubusercontent.com/94749778/163781636-e604e92c-9ee5-4114-ada4-fc2806686f95.png)
+![image](https://user-images.githubusercontent.com/94749778/163812931-0b96f83d-5e58-4623-802e-6ef5ea72bb02.png)
 
 - Таблица ***efmigrationhistory*** хранит данные о миграциях нашей бд
 ## TemplatesController
@@ -24,7 +24,7 @@ WebApi, которое позволяет получить из данных и 
 ```
 Просто возвращает все данные из таблицы ***templates***
 
-![image](https://user-images.githubusercontent.com/94749778/163781777-f6f485a0-8591-45ce-8b82-823439850a75.png)
+![image](https://user-images.githubusercontent.com/94749778/163813009-0e9f77ef-47a0-4ef8-af09-6698270d8a37.png)
 
 ```cs
 [HttpGet("{id}")]
@@ -37,7 +37,7 @@ WebApi, которое позволяет получить из данных и 
 ```
 Возвращает данные об одной записи по id
 
-![image](https://user-images.githubusercontent.com/94749778/163781841-f016e6a4-f2ab-4b17-b339-75946b266752.png)
+![image](https://user-images.githubusercontent.com/94749778/163813027-6d44d6ec-a916-4a01-a27d-7102bda2bc57.png)
 
 Если записи с данным id нет
 
@@ -50,7 +50,7 @@ WebApi, которое позволяет получить из данных и 
         var template = await _context.Templates.FirstOrDefaultAsync(t => t.Id == id);
         if (template == null) return NotFound("Шаблона с таким id нет");
 
-        var filePath = Path.Combine($"{_environment.ContentRootPath}{template.Path}");
+        var filePath = template.Name;
         filePath = _fastReportService.FillReport(dictionary,filePath,format);
 
         var provider = new FileExtensionContentTypeProvider();
@@ -71,3 +71,59 @@ WebApi, которое позволяет получить из данных и 
 И на выходе получим готовый файл
 
 ![image](https://user-images.githubusercontent.com/94749778/163782623-0df6b726-fd44-42bb-a4b0-9eaa14c90b70.png)
+#### POST
+В контроллере реализованы следующие методы POST:
+```cs
+[HttpPost]
+public async Task<IActionResult> Post(TemplateViewModel template)
+    {
+        if (template != null)
+        {
+            var dbtemplate = new Template
+            {
+                Name = template.Name,
+            };
+            await _context.AddAsync(dbtemplate);
+            await _context.SaveChangesAsync();
+            return Ok();
+        }
+        return BadRequest();
+    }
+```
+Введем данные
+
+![image](https://user-images.githubusercontent.com/94749778/163813492-4dc5c5d9-e1b4-4e9b-abb1-962175f4a6d9.png)
+
+И просмотрим что хранится в бд
+
+![image](https://user-images.githubusercontent.com/94749778/163813652-72057207-1c63-4886-96e0-32b3ea73e0c4.png)
+
+```cs
+[HttpPost("[action]")]
+    public async Task<IActionResult> UploadFile(IFormFile file)
+    {
+        if (file == null) return BadRequest();
+        string dir = Path.Combine($"{_environment.ContentRootPath}\\wwwroot\\Templates");
+        string filePath = Path.Combine(dir, file.FileName);
+        using (var stream = new FileStream(filePath, FileMode.Create))
+        {
+            file.CopyTo(stream);
+        }
+        return Ok("Upload Successful");
+    }
+```
+
+Данный метод загружает выбраный файл в папку wwwroot
+Загрузим новый шаблон документа
+
+![image](https://user-images.githubusercontent.com/94749778/163813903-4a189f90-516f-4b82-a4f1-0ff2d5986e62.png)
+
+Получим следующее сообщение 
+
+![image](https://user-images.githubusercontent.com/94749778/163813981-2a3a282d-5c51-4b7b-9a0b-c6153ce94c73.png)
+
+Проверем наличие файла
+
+![image](https://user-images.githubusercontent.com/94749778/163814370-a4813264-da88-4720-9485-cd277a9547bd.png)
+
+
