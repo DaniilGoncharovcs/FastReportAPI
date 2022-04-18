@@ -71,3 +71,58 @@ WebApi, которое позволяет получить из данных и 
 И на выходе получим готовый файл
 
 ![image](https://user-images.githubusercontent.com/94749778/163782623-0df6b726-fd44-42bb-a4b0-9eaa14c90b70.png)
+#### POST
+В контроллере реализованы следующие методы POST:
+```cs
+[HttpPost]
+public async Task<IActionResult> Post(TemplateViewModel template)
+    {
+        if (template != null)
+        {
+            var dbtemplate = new Template
+            {
+                Name = template.Name,
+            };
+            await _context.AddAsync(dbtemplate);
+            await _context.SaveChangesAsync();
+            return Ok();
+        }
+        return BadRequest();
+    }
+```
+Введем данные
+
+![image](https://user-images.githubusercontent.com/94749778/163813492-4dc5c5d9-e1b4-4e9b-abb1-962175f4a6d9.png)
+
+И просмотрим что хранится в бд
+
+![image](https://user-images.githubusercontent.com/94749778/163813652-72057207-1c63-4886-96e0-32b3ea73e0c4.png)
+
+```cs
+[HttpPost("[action]")]
+    public async Task<IActionResult> UploadFile(IFormFile file)
+    {
+        if (file == null) return BadRequest();
+        string dir = Path.Combine($"{_environment.ContentRootPath}\\wwwroot\\Templates");
+        string filePath = Path.Combine(dir, file.FileName);
+        using (var stream = new FileStream(filePath, FileMode.Create))
+        {
+            file.CopyTo(stream);
+        }
+        return Ok("Upload Successful");
+    }
+```
+
+Данный метод загружает выбраный файл в папку wwwroot
+Загрузим новый шаблон документа
+
+![image](https://user-images.githubusercontent.com/94749778/163813903-4a189f90-516f-4b82-a4f1-0ff2d5986e62.png)
+
+Получим следующее сообщение 
+
+![image](https://user-images.githubusercontent.com/94749778/163813981-2a3a282d-5c51-4b7b-9a0b-c6153ce94c73.png)
+
+Проверем наличие файла
+![image](https://user-images.githubusercontent.com/94749778/163814370-a4813264-da88-4720-9485-cd277a9547bd.png)
+
+
