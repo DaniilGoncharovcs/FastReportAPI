@@ -10,7 +10,7 @@ WebApi, которое позволяет получить из данных и 
 
 - Таблица ***templates*** хранит id, путь к шаблону и его название. При инициализации БД в нее уже добавляется следующее значение:
 
-![image](https://user-images.githubusercontent.com/94749778/163781636-e604e92c-9ee5-4114-ada4-fc2806686f95.png)
+![image](https://user-images.githubusercontent.com/94749778/163812931-0b96f83d-5e58-4623-802e-6ef5ea72bb02.png)
 
 - Таблица ***efmigrationhistory*** хранит данные о миграциях нашей бд
 ## TemplatesController
@@ -24,7 +24,7 @@ WebApi, которое позволяет получить из данных и 
 ```
 Просто возвращает все данные из таблицы ***templates***
 
-![image](https://user-images.githubusercontent.com/94749778/163781777-f6f485a0-8591-45ce-8b82-823439850a75.png)
+![image](https://user-images.githubusercontent.com/94749778/163813009-0e9f77ef-47a0-4ef8-af09-6698270d8a37.png)
 
 ```cs
 [HttpGet("{id}")]
@@ -37,7 +37,7 @@ WebApi, которое позволяет получить из данных и 
 ```
 Возвращает данные об одной записи по id
 
-![image](https://user-images.githubusercontent.com/94749778/163781841-f016e6a4-f2ab-4b17-b339-75946b266752.png)
+![image](https://user-images.githubusercontent.com/94749778/163813027-6d44d6ec-a916-4a01-a27d-7102bda2bc57.png)
 
 Если записи с данным id нет
 
@@ -50,7 +50,7 @@ WebApi, которое позволяет получить из данных и 
         var template = await _context.Templates.FirstOrDefaultAsync(t => t.Id == id);
         if (template == null) return NotFound("Шаблона с таким id нет");
 
-        var filePath = Path.Combine($"{_environment.ContentRootPath}{template.Path}");
+        var filePath = template.Name;
         filePath = _fastReportService.FillReport(dictionary,filePath,format);
 
         var provider = new FileExtensionContentTypeProvider();
