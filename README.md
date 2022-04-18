@@ -123,6 +123,7 @@ public async Task<IActionResult> Post(TemplateViewModel template)
 ![image](https://user-images.githubusercontent.com/94749778/163813981-2a3a282d-5c51-4b7b-9a0b-c6153ce94c73.png)
 
 Проверем наличие файла
+
 ![image](https://user-images.githubusercontent.com/94749778/163814370-a4813264-da88-4720-9485-cd277a9547bd.png)
 
 
