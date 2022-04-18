@@ -18,25 +18,25 @@ namespace FastReportAPI.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Path = table.Column<string>(type: "longtext", nullable: false)
+                    Name = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_templates", x => x.Id);
+                    table.PrimaryKey("PK_Templates", x => x.Id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.InsertData(
-                table: "templates",
-                columns: new[] { "Id", "Path" },
-                values: new object[] { 1, "\\Акт возобновления качественного предоставления услуг" });
+                table: "Templates",
+                columns: new[] { "Id", "Name" },
+                values: new object[] { 1, "Акт возобновления качественного предоставления услуг" });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "templates");
+                name: "Templates");
         }
     }
 }

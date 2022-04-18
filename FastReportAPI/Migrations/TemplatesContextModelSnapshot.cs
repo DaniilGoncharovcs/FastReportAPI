@@ -28,10 +28,6 @@ namespace FastReportAPI.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Path")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
                     b.HasKey("Id");
 
                     b.ToTable("Templates");
@@ -40,8 +36,7 @@ namespace FastReportAPI.Migrations
                         new
                         {
                             Id = 1,
-                            Name = "Тестовый шаблон",
-                            Path = "\\Акт возобновления качественного предоставления услуг"
+                            Name = "Акт возобновления качественного предоставления услуг"
                         });
                 });
 #pragma warning restore 612, 618

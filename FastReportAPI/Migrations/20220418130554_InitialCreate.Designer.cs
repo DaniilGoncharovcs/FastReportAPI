@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FastReportAPI.Migrations
 {
     [DbContext(typeof(TemplatesContext))]
-    [Migration("20220414110217_InitialCreate")]
+    [Migration("20220418130554_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,19 +26,19 @@ namespace FastReportAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("Path")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");
 
-                    b.ToTable("templates");
+                    b.ToTable("Templates");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            Path = "../wwwroot/template1"
+                            Name = "Акт возобновления качественного предоставления услуг"
                         });
                 });
 #pragma warning restore 612, 618

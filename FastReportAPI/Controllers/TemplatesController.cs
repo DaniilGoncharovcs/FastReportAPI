@@ -30,7 +30,6 @@ public class TemplatesController : Controller
             var dbtemplate = new Template
             {
                 Name = template.Name,
-                Path = template.Path
             };
             await _context.AddAsync(dbtemplate);
             await _context.SaveChangesAsync();
@@ -46,7 +45,6 @@ public class TemplatesController : Controller
         if (template != null)
         {
             dbTemplate.Name = template.Name;
-            dbTemplate.Path = template.Path;
             await _context.SaveChangesAsync();
             return Ok();
         }
@@ -79,7 +77,7 @@ public class TemplatesController : Controller
         var template = await _context.Templates.FirstOrDefaultAsync(t => t.Id == id);
         if (template == null) return NotFound("Шаблона с таким id нет");
 
-        var filePath = template.Path;
+        var filePath = template.Name;
         filePath = _fastReportService.FillReport(dictionary,filePath,format);
 
         var provider = new FileExtensionContentTypeProvider();
