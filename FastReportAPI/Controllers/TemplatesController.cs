@@ -27,13 +27,16 @@ public class TemplatesController : Controller
     {
         if (template != null)
         {
+            var containsThisName = await _context.Templates.FirstOrDefaultAsync(t => t.Name == template.Name);
+            if (containsThisName != null) return BadRequest("Шаблон с таким именем уже существует");
+
             var dbtemplate = new Template
             {
                 Name = template.Name,
             };
             await _context.AddAsync(dbtemplate);
             await _context.SaveChangesAsync();
-            return Ok();
+            return NoContent();
         }
         return BadRequest();
     }
@@ -42,13 +45,13 @@ public class TemplatesController : Controller
     {
         var dbTemplate = await _context.Templates.FirstOrDefaultAsync(t => t.Id == id);
         if (dbTemplate == null) return NotFound("Такого шаблона нет");
-        if (template != null)
+        if (template != null && template.Name != null)
         {
             dbTemplate.Name = template.Name;
             await _context.SaveChangesAsync();
-            return Ok();
+            return NoContent();
         }
-        return BadRequest("путь к файлу не может быть пустым");
+        return BadRequest("Передан пустой шаблон");
     }
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id)
@@ -57,7 +60,7 @@ public class TemplatesController : Controller
         if (dbTemplate == null) return NotFound("Такого шаблона нет");
         _context.Templates.Remove(dbTemplate);
         await _context.SaveChangesAsync();
-        return Ok();
+        return NoContent();
     }
     [HttpPost("[action]")]
     public async Task<IActionResult> UploadFile(IFormFile file)
