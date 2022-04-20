@@ -75,12 +75,12 @@ public class TemplatesController : Controller
         return Ok("Upload Successful");
     }
     [HttpGet("[action]")]
-    public async Task<IActionResult> DownloadFile(int id, [FromQuery] Dictionary<string, string> dictionary, string format)
+    public async Task<IActionResult> Export(int id, [FromQuery] Dictionary<string, string> dictionary, string format)
     {
         var template = await _context.Templates.FirstOrDefaultAsync(t => t.Id == id);
         if (template == null) return NotFound("Шаблона с таким id нет");
-
         var filePath = template.Name;
+        if (dictionary == null || format == null) return BadRequest("Не переданы параметры и/или формат выходного файла");
         filePath = _fastReportService.FillReport(dictionary,filePath,format);
 
         var provider = new FileExtensionContentTypeProvider();
