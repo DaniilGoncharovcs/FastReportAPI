@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Report ScriptLanguage="CSharp" ReportInfo.Created="12/01/2021 16:55:13" ReportInfo.Modified="04/15/2022 14:05:14" ReportInfo.CreatorVersion="2022.2.6.0">
+<Report ScriptLanguage="CSharp" ReportInfo.Created="12/01/2021 16:55:13" ReportInfo.Modified="04/21/2022 09:59:44" ReportInfo.CreatorVersion="2022.2.6.0">
   <Dictionary>
     <Parameter Name="Day" DataType="System.String"/>
     <Parameter Name="Month" DataType="System.String"/>
@@ -23,22 +23,24 @@
   </Dictionary>
   <ReportPage Name="Page1" RawPaperSize="9" Watermark.Font="Arial, 60pt">
     <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="103.95">
-      <TextObject Name="Text1" Left="9.45" Top="9.45" Width="18.9" Height="18.9" IsIntersectedWithOtherObject="true" Text="«" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text1" Left="9.45" Top="9.45" Width="18.9" Height="18.9" Text="«" Font="Times New Roman, 10pt"/>
       <LineObject Name="Line1" Left="28.35" Top="28.35" Width="28.35" Diagonal="true"/>
-      <TextObject Name="Text2" Left="56.7" Top="9.45" Width="18.9" Height="18.9" IsIntersectedWithOtherObject="true" Text="»" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text2" Left="56.7" Top="9.45" Width="18.9" Height="18.9" Text="»" Font="Times New Roman, 10pt"/>
       <LineObject Name="Line2" Left="75.6" Top="28.35" Width="75.6" Diagonal="true"/>
-      <TextObject Name="Text3" Left="151.2" Top="9.45" Width="28.35" Height="18.9" IsIntersectedWithOtherObject="true" Text="20" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text3" Left="151.2" Top="9.45" Width="28.35" Height="18.9" Text="20" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
       <LineObject Name="Line3" Left="179.55" Top="28.35" Width="28.35" Diagonal="true"/>
-      <TextObject Name="Text4" Left="207.9" Top="9.45" Width="18.9" Height="18.9" IsIntersectedWithOtherObject="true" Text="г." HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text4" Left="207.9" Top="9.45" Width="18.9" Height="18.9" Text="г." HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
       <TextObject Name="Text5" Left="9.45" Top="28.35" Width="699.3" Height="18.9" Text="АКТ" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 14pt, style=Bold"/>
       <TextObject Name="Text6" Left="9.45" Top="47.25" Width="699.3" Height="18.9" Text="возобновления качественного предоставления" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 14pt, style=Bold"/>
       <TextObject Name="Text7" Left="9.45" Top="66.15" Width="699.3" Height="18.9" Text="жилищно-коммунальных услуг" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 14pt, style=Bold"/>
-      <TextObject Name="Text40" Left="18.9" Top="9.45" Width="207.9" Height="18.9" IsIntersectedWithOtherObject="true" Text=" [Day]          [Month]                          [Year]" Font="Arial, 10pt"/>
+      <TextObject Name="Text40" Left="28.35" Top="9.45" Width="28.35" Height="18.9" Text="[Day]" Font="Arial, 10pt"/>
+      <TextObject Name="Text64" Left="85.05" Top="9.45" Width="56.7" Height="18.9" Text="[Month]" Font="Arial, 10pt"/>
+      <TextObject Name="Text65" Left="179.55" Top="9.45" Width="28.35" Height="18.9" Text="[Year]" Font="Arial, 10pt"/>
     </ReportTitleBand>
-    <DataBand Name="Data1" Top="106.24" Width="718.2" Height="340.2">
+    <DataBand Name="Data1" Top="106.62" Width="718.2" Height="340.2">
       <TextObject Name="Text8" Left="9.45" Width="179.55" Height="18.9" Text="Управляющая организация «" HorzAlign="Right" VertAlign="Center" Font="Times New Roman, 10pt"/>
       <LineObject Name="Line4" Left="189" Top="18.9" Width="75.6" Diagonal="true"/>
-      <TextObject Name="Text9" Left="274.05" Width="132.3" Height="18.9" IsIntersectedWithOtherObject="true" Text="» в лице (должность, Ф.И.О.) " HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text9" Left="274.05" Width="132.3" Height="18.9" Text="» в лице (должность, Ф.И.О.) " HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
       <LineObject Name="Line5" Left="396.9" Top="18.9" Width="217.35" Diagonal="true"/>
       <TextObject Name="Text10" Left="604.8" Width="103.95" Height="18.9" Text="в присутствии:" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
       <TextObject Name="Text11" Left="9.45" Top="18.9" Width="340.2" Height="18.9" Text="1.Собственника помещения (Ф.И.О., адрес проживания)" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
@@ -50,13 +52,13 @@
       <LineObject Name="Line8" Left="434.7" Top="94.5" Width="274.05" Diagonal="true"/>
       <TextObject Name="Text15" Left="9.45" Top="94.5" Width="368.55" Height="18.9" Text="4. Представителя ресурсоснабжающей организации (Ф.И.О.)" HorzAlign="Justify" VertAlign="Center" Font="Times New Roman, 10pt"/>
       <LineObject Name="Line9" Left="396.9" Top="113.4" Width="330.75" IsIntersectedWithOtherObject="true" Diagonal="true"/>
-      <TextObject Name="Text16" Left="9.45" Top="113.4" Width="236.25" Height="18.9" IsIntersectedWithOtherObject="true" Text="Составлен настоящий акт о том, что «" HorzAlign="Justify" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text16" Left="9.45" Top="113.4" Width="236.25" Height="18.9" Text="Составлен настоящий акт о том, что «" HorzAlign="Justify" VertAlign="Center" Font="Times New Roman, 10pt"/>
       <LineObject Name="Line10" Left="245.7" Top="132.3" Width="28.35" Diagonal="true"/>
-      <TextObject Name="Text17" Left="274.05" Top="113.4" Width="18.9" Height="18.9" IsIntersectedWithOtherObject="true" Text="»" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text17" Left="274.05" Top="113.4" Width="18.9" Height="18.9" Text="»" Font="Times New Roman, 10pt"/>
       <LineObject Name="Line11" Left="292.95" Top="132.3" Width="37.8" Diagonal="true"/>
       <LineObject Name="Line12" Left="359.1" Top="132.3" Width="18.9" Diagonal="true"/>
       <TextObject Name="Text18" Left="330.75" Top="113.4" Width="28.35" Height="18.9" IsIntersectedWithOtherObject="true" Text="20" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
-      <TextObject Name="Text19" Left="378" Top="113.4" Width="18.9" Height="18.9" IsIntersectedWithOtherObject="true" Text="г." HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text19" Left="378" Top="113.4" Width="18.9" Height="18.9" Text="г." HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
       <TextObject Name="Text20" Left="396.9" Top="113.4" Width="311.85" Height="18.9" Text="устранены недостатки предоставления жилищных/" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
       <TextObject Name="Text21" Left="9.45" Top="132.3" Width="151.2" Height="18.9" Text="коммунальных услуг по" HorzAlign="Justify" VertAlign="Center" Font="Times New Roman, 10pt"/>
       <LineObject Name="Line13" Left="160.65" Top="151.2" Width="245.7" Diagonal="true"/>
@@ -67,7 +69,7 @@
       <LineObject Name="Line15" Left="170.1" Top="189" Width="28.35" Diagonal="true"/>
       <TextObject Name="Text25" Left="198.45" Top="170.1" Width="56.7" Height="18.9" Text="дома №" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
       <LineObject Name="Line16" Left="255.15" Top="189" Width="28.35" Diagonal="true"/>
-      <TextObject Name="Text26" Left="283.5" Top="170.1" Width="47.25" Height="18.9" IsIntersectedWithOtherObject="true" Text="по ул." HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text26" Left="283.5" Top="170.1" Width="47.25" Height="18.9" Text="по ул." HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
       <LineObject Name="Line17" Left="330.75" Top="189" Width="141.75" Diagonal="true"/>
       <TextObject Name="Text27" Left="472.5" Top="170.1" Width="18.9" Height="18.9" Text="г." HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
       <LineObject Name="Line18" Left="491.4" Top="189" Width="141.75" Diagonal="true"/>
@@ -82,8 +84,8 @@
       <TextObject Name="Text33" Left="9.45" Top="283.5" Width="283.5" Height="18.9" Text="5. Представитель общественного объединения потребителей" VertAlign="Center" Font="Times New Roman, 10pt"/>
       <LineObject Name="Line22" Left="292.95" Top="302.4" Width="94.5" Diagonal="true"/>
       <LineObject Name="Line23" Left="28.35" Top="321.3" Width="28.35" Diagonal="true"/>
-      <TextObject Name="Text34" Left="9.45" Top="302.4" Width="18.9" Height="18.9" IsIntersectedWithOtherObject="true" Text="«" Font="Times New Roman, 10pt"/>
-      <TextObject Name="Text35" Left="56.7" Top="302.4" Width="18.9" Height="18.9" IsIntersectedWithOtherObject="true" Text="»" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text34" Left="9.45" Top="302.4" Width="18.9" Height="18.9" Text="«" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text35" Left="56.7" Top="302.4" Width="18.9" Height="18.9" Text="»" Font="Times New Roman, 10pt"/>
       <LineObject Name="Line24" Left="75.6" Top="321.3" Width="245.7" Diagonal="true"/>
       <LineObject Name="Line25" Left="349.65" Top="321.3" Width="18.9" Diagonal="true"/>
       <TextObject Name="Text36" Left="321.3" Top="302.4" Width="28.35" Height="18.9" Text="20" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
@@ -92,28 +94,28 @@
       <LineObject Name="Line26" Left="434.7" Top="321.3" Width="28.35" Diagonal="true"/>
       <TextObject Name="Text39" Left="463.05" Top="302.4" Width="18.9" Height="18.9" Text="ч" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
       <LineObject Name="Line27" Left="481.95" Top="321.3" Width="28.35" Diagonal="true"/>
-      <TextObject Name="Text41" Left="189" Width="94.5" Height="18.9" IsIntersectedWithOtherObject="true" Text="[Organization]" Font="Arial, 10pt"/>
-      <TextObject Name="Text42" Left="415.8" Width="85.05" Height="18.9" Text="[OrganizationPosition]" Font="Arial, 10pt"/>
-      <TextObject Name="Text44" Left="349.65" Top="18.9" Width="94.5" Height="18.9" Text="[Owner]" Font="Arial, 10pt"/>
-      <TextObject Name="Text45" Left="529.2" Top="18.9" Width="94.5" Height="18.9" Text="[Address]" Font="Arial, 10pt"/>
-      <TextObject Name="Text46" Left="406.35" Top="56.7" Width="103.95" Height="18.9" Text="[InspectorPost]" Font="Arial, 10pt"/>
-      <TextObject Name="Text47" Left="567" Top="56.7" Width="94.5" Height="18.9" Text="[InspectorFio]" Font="Arial, 10pt"/>
-      <TextObject Name="Text48" Left="453.6" Top="75.6" Width="113.4" Height="18.9" Text="[ConsumerFio]" Font="Arial, 10pt"/>
-      <TextObject Name="Text49" Left="434.7" Top="94.5" Width="94.5" Height="18.9" Text="[ResourceFio]" Font="Arial, 10pt"/>
-      <TextObject Name="Text50" Left="18.9" Top="302.4" Width="94.5" Height="18.9" IsIntersectedWithOtherObject="true" Text="[Day]" Font="Arial, 10pt"/>
-      <TextObject Name="Text51" Left="141.75" Top="302.4" Width="94.5" Height="18.9" Text="[Month]" Font="Arial, 10pt"/>
+      <TextObject Name="Text41" Left="189" Width="75.6" Height="18.9" Text="[Organization]" Font="Arial, 10pt"/>
+      <TextObject Name="Text42" Left="406.35" Width="141.75" Height="18.9" Text="[OrganizationPosition]" Font="Arial, 10pt"/>
+      <TextObject Name="Text44" Left="349.65" Top="18.9" Width="179.55" Height="18.9" Text="[Owner]" Font="Arial, 10pt"/>
+      <TextObject Name="Text45" Left="529.2" Top="18.9" Width="179.55" Height="18.9" Text="[Address]" Font="Arial, 10pt"/>
+      <TextObject Name="Text46" Left="406.35" Top="56.7" Width="151.2" Height="18.9" Text="[InspectorPost]" Font="Arial, 10pt"/>
+      <TextObject Name="Text47" Left="557.55" Top="56.7" Width="151.2" Height="18.9" Text="[InspectorFio]" Font="Arial, 10pt"/>
+      <TextObject Name="Text48" Left="434.7" Top="75.6" Width="274.05" Height="18.9" Text="[ConsumerFio]" Font="Arial, 10pt"/>
+      <TextObject Name="Text49" Left="396.9" Top="94.5" Width="311.85" Height="18.9" Text="[ResourceFio]" Font="Arial, 10pt"/>
+      <TextObject Name="Text50" Left="28.35" Top="302.4" Width="28.35" Height="18.9" Text="[Day]" Font="Arial, 10pt"/>
+      <TextObject Name="Text51" Left="160.65" Top="302.4" Width="66.15" Height="18.9" Text="[Month]" Font="Arial, 10pt"/>
       <TextObject Name="Text52" Left="349.65" Top="302.4" Width="28.35" Height="18.9" IsIntersectedWithOtherObject="true" Text="[Year]" Font="Arial, 10pt"/>
       <TextObject Name="Text53" Left="434.7" Top="302.4" Width="28.35" Height="18.9" Text="[Hours]" Font="Arial, 10pt"/>
       <TextObject Name="Text54" Left="481.95" Top="302.4" Width="28.35" Height="18.9" Text="[Minutes]" Font="Arial, 10pt"/>
-      <TextObject Name="Text55" Left="236.25" Top="113.4" Width="94.5" Height="18.9" IsIntersectedWithOtherObject="true" Text="[Day]" Font="Arial, 10pt"/>
-      <TextObject Name="Text56" Left="283.5" Top="113.4" Width="94.5" Height="18.9" IsIntersectedWithOtherObject="true" Text="[Month]" Font="Arial, 10pt"/>
-      <TextObject Name="Text57" Left="349.65" Top="113.4" Width="37.8" Height="18.9" IsIntersectedWithOtherObject="true" Text="[Year]" Font="Arial, 10pt"/>
-      <TextObject Name="Text58" Left="198.45" Top="132.3" Width="94.5" Height="18.9" Text="[Service]" Font="Arial, 10pt"/>
-      <TextObject Name="Text59" Left="255.15" Top="151.2" Width="94.5" Height="18.9" Text="[Cause]" Font="Arial, 10pt"/>
+      <TextObject Name="Text55" Left="245.7" Top="113.4" Width="28.35" Height="18.9" Text="[Day]" Font="Arial, 10pt"/>
+      <TextObject Name="Text56" Left="292.95" Top="113.4" Width="47.25" Height="18.9" IsIntersectedWithOtherObject="true" Text="[Month]" Font="Arial, 10pt"/>
+      <TextObject Name="Text57" Left="349.65" Top="113.4" Width="28.35" Height="18.9" IsIntersectedWithOtherObject="true" Text="[Year]" Font="Arial, 10pt"/>
+      <TextObject Name="Text58" Left="160.65" Top="132.3" Width="245.7" Height="18.9" Text="[Service]" Font="Arial, 10pt"/>
+      <TextObject Name="Text59" Left="207.9" Top="151.2" Width="406.35" Height="18.9" Text="[Cause]" Font="Arial, 10pt"/>
       <TextObject Name="Text60" Left="170.1" Top="170.1" Width="28.35" Height="18.9" Text="[Flat]" Font="Arial, 10pt"/>
-      <TextObject Name="Text61" Left="255.15" Top="170.1" Width="37.8" Height="18.9" IsIntersectedWithOtherObject="true" Text="[House]" Font="Arial, 10pt"/>
-      <TextObject Name="Text62" Left="368.55" Top="170.1" Width="94.5" Height="18.9" Text="[Street]" Font="Arial, 10pt"/>
-      <TextObject Name="Text63" Left="529.2" Top="170.1" Width="94.5" Height="18.9" Text="[City]" Font="Arial, 10pt"/>
+      <TextObject Name="Text61" Left="255.15" Top="170.1" Width="28.35" Height="18.9" Text="[House]" Font="Arial, 10pt"/>
+      <TextObject Name="Text62" Left="330.75" Top="170.1" Width="141.75" Height="18.9" Text="[Street]" Font="Arial, 10pt"/>
+      <TextObject Name="Text63" Left="491.4" Top="170.1" Width="141.75" Height="18.9" Text="[City]" Font="Arial, 10pt"/>
     </DataBand>
   </ReportPage>
 </Report>

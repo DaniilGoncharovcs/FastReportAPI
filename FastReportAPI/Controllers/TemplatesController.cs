@@ -75,7 +75,7 @@ public class TemplatesController : Controller
         return Ok("Upload Successful");
     }
     [HttpGet("[action]")]
-    public async Task<IActionResult> Export(int id, [FromQuery] Dictionary<string, string> dictionary, string format)
+    public async Task<IActionResult> Export(int id, [FromQuery] Dictionary<string, string> dictionary, ExportFormat format)
     {
         var template = await _context.Templates.FirstOrDefaultAsync(t => t.Id == id);
         if (template == null) return NotFound("Шаблона с таким id нет");
