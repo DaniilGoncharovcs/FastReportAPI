@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.StaticFiles;
+using Newtonsoft.Json;
 
 namespace FastReportAPI.Controllers;
 [ApiController]
@@ -75,13 +76,15 @@ public class TemplatesController : Controller
         return Ok("Upload Successful");
     }
     [HttpGet("[action]")]
-    public async Task<IActionResult> Export(int id, [FromQuery] Dictionary<string, string> dictionary, ExportFormat format)
+    public async Task<IActionResult> Export(int id, string dictionary, ExportFormat format)
     {
         var template = await _context.Templates.FirstOrDefaultAsync(t => t.Id == id);
         if (template == null) return NotFound("Шаблона с таким id нет");
         var filePath = template.Name;
         if (dictionary == null || format == null) return BadRequest("Не переданы параметры и/или формат выходного файла");
-        filePath = _fastReportService.FillReport(dictionary,filePath,format);
+        
+        var json = JsonConvert.DeserializeObject<Dictionary<string,dynamic>>(dictionary);
+        filePath = _fastReportService.FillReport(json,filePath,format);
 
         var provider = new FileExtensionContentTypeProvider();
         if (!provider.TryGetContentType(filePath, out var contentType))
