@@ -6,16 +6,20 @@ public class FastReportService : IFastReportService
     public FastReportService(IWebHostEnvironment environment)
         => _environment = environment;
 
-    public string FillReport(Dictionary<string, dynamic> parametrsList, string filename, ExportFormat format)
+    public string FillReport(Dictionary<string, dynamic> json, string filename, ExportFormat format)
     {
         using (var report = new Report())
         {
             var filePath = Path.Combine($"{_environment.ContentRootPath}\\wwwroot\\Templates\\{filename}");
             report.Load($"{filePath}.frx");
-            dynamic dyn = parametrsList["JsonConnection"];
-            string result = string.Empty;
-            foreach(var parametr in parametrsList)
+
+            foreach(var parametr in json)
                 report.SetParameterValue(parametr.Key, parametr.Value);
+            
+            dynamic dyn = json["Data"];
+            var conn = "Json={\"Data\":";
+            report.Dictionary.Connections[0].ConnectionString = $"{conn}{Convert.ToString(dyn)}}}";
+            
             report.Prepare();
 
             switch (format)

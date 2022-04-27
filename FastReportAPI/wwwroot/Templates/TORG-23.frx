@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Report ScriptLanguage="CSharp" ReportInfo.Created="01/28/2021 16:14:18" ReportInfo.Modified="04/25/2022 15:49:16" ReportInfo.CreatorVersion="2022.2.6.0">
+<Report ScriptLanguage="CSharp" ReportInfo.Created="01/28/2021 16:14:18" ReportInfo.Modified="04/27/2022 12:26:07" ReportInfo.CreatorVersion="2022.2.6.0">
   <ScriptText>using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -25,38 +25,11 @@ namespace FastReport
 }
 </ScriptText>
   <Dictionary>
-    <JsonDataSourceConnection Name="Connection" ConnectionString="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">
+    <JsonDataSourceConnection Name="Connection" ConnectionString="rijcmlqXCO1MygKSJhf/I70Y6e33JgCWYhGcv80FBQ+Rla6sfQjESXvR5stb/B2fu7BBxhbQh442jlq0Br/PqdMKsdQ2DcDAiifhwwV9X2XGagrJCN+aT9rZNuRlXDOsPDVfwyhmxRgGTEBdvOQ1O8SwE3tL+SUUYXInFZejTEFGE3uQEmcNGixWNlkHyX+6KGxTDZiJsJwvAz86daW7S75K0BSRsWDtSrIaNfX/oTwQ/ZGGRACTMhaxSWJeBxQAFzPIiVxPBz/QaTz34ez0RKy9e/wZKVjFGjyXG7OqRhXRe3RGAkcqEVweWyz08Kd9zKe5jp4xxa8gvo8jweb2zewhO4ZjJre5d+okfc94IxA4JoCZWRcdYqSyBILeJBTiNVVhuEAs7eqK6tayhVZGfPSgK4blN5LRD5l75ncO8DPKBkvvFxe3r4a36+yAysp0JI4Q5Rj6WG30EHu/odnO90Cy/CevXOccM6dgU1M8xm6U4wpVgw8CbInu/ZGocEnmL4SVj5zNEv13kCjOh7m/EtKdDt3jqdSeyMTvNSMlvSk2j26X7057xwxcf+9rpEm5hrYJZZCYdMJmQ65Q2VNagJk+WsE5Mn1FWo8EsQh8ua7LAETqUZz15ZiU7QMduAaUF3QOMxjQj+ENZL8hsbu8kDwJBcPOj+u0mQyX/gYoFQ+8V5C2583PVHQD/HQuxX7iEhNYOJy10xwMbFJPIbTNM/YMXXAH0DtMkiA8kfFKuJHgwIgkbCX2leMAetITT0w23Yv9PZG/AkI/OMtbfMoktqmhRhcXWOigaMdOMVSlmL0iNsZydoB23+D551VUkgQje6uS8siW8LOAREMfE/k/Fk5RGvHbMondgw/D+NFAyO72+tEgA8nuvL7xCrO+AA6ikLSyzPqS+jqwkiNrBl4xO5/T1trYB40N7Zgtr0cP84srTSEkbO9HU15BbXLENhPabQ2VrbWxJnxYvXrGU72Fe52Or7nOiYdSlCv2ySda0src/POptIIFz4jZrcXXylfC6ih/PbDAx7V0ZKFbJdfuYxp7Yb8kih8qrEgxorxtDayqNNt4sFwsMiHw7BzRHhIbUIcjIAIL67I/vrGkyljwGYr1+vWivNCNfap4tXLBh9yflL7b56JN/M5kHcFnTw7pXxIoeiekiQcqwYx1h1mKtZrP/IabDmmB2Xc5PdAIXTDGPV0i4gazHalKPfs/imQxV0ucrOfCbgaDUgWdoJGXZfn6PKRAL+YQBDnLDecZuyFFYRcJScYUdKpWsnbDvQKqlbereDds/1Q94061OU3OCwx9kpdUymq4aDTgFLHlERfgNsiPeBvzI9wlRffgBF0nL7LpkoH5S9Hpn/D36ve1etbnxiIO8+ZGxHUwdL7eu9NpVKTPt0H83ER/L8Dgc2qPoGtcdKny+vuQGfRyfGknLUFTN/VJfo70d/f+cHJKPG2avsrONYoM4uB/HMOutQeppgQMabIskdhb/9D4nY2SqW+8GUILMUunqqL5x26VjfTvNAWAyc=">
       <JsonTableDataSource Name="JSON" DataType="FastReport.Data.JsonConnection.JsonParser.JsonArray" Enabled="true" TableName="JSON">
         <Column Name="index" DataType="System.Int32"/>
         <Column Name="item" DataType="FastReport.JsonBase">
-          <Column Name="Day" DataType="System.String"/>
-          <Column Name="Month" DataType="System.String"/>
-          <Column Name="Year" DataType="System.String"/>
-          <Column Name="Organization" DataType="System.String"/>
-          <Column Name="Address" DataType="System.String"/>
-          <Column Name="Phone" DataType="System.String"/>
-          <Column Name="Okpo" DataType="System.String"/>
-          <Column Name="INN" DataType="System.String"/>
-          <Column Name="Struct" DataType="System.String"/>
-          <Column Name="FirstName" DataType="System.String"/>
-          <Column Name="SecondName" DataType="System.String"/>
-          <Column Name="Otchestvo" DataType="System.String"/>
-          <Column Name="AddressEmployee" DataType="System.String"/>
-          <Column Name="PhoneEmployee" DataType="System.String"/>
-          <Column Name="PassSeria" DataType="System.String"/>
-          <Column Name="PassNumber" DataType="System.String"/>
-          <Column Name="PassIssuer" DataType="System.String"/>
-          <Column Name="PassNameIssuer" DataType="System.String"/>
-          <Column Name="ShopName" DataType="System.String"/>
-          <Column Name="ShopAddress" DataType="System.String"/>
-          <Column Name="Place" DataType="System.String"/>
-          <Column Name="TovarDay" DataType="System.String"/>
-          <Column Name="TovarMonth" DataType="System.String"/>
-          <Column Name="TovarFIO" DataType="System.String"/>
-          <Column Name="TovarNumber" DataType="System.String"/>
-          <Column Name="Post" DataType="System.String"/>
-          <Column Name="Registration" DataType="System.String"/>
-          <JsonTableDataSource Name="JsonConnection" DataType="FastReport.JsonBase" Enabled="true">
+          <JsonTableDataSource Name="Data" DataType="FastReport.JsonBase" Enabled="true">
             <Column Name="index" DataType="System.Int32"/>
             <Column Name="item" DataType="FastReport.JsonBase">
               <Column Name="Date" DataType="System.String"/>
@@ -111,7 +84,7 @@ namespace FastReport
       <TextObject Name="Text1" Left="481.95" Width="226.8" Height="18.9" Text="Унифицированная форма N ТОРГ-23" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
       <TextObject Name="Text2" Left="576.45" Top="18.9" Width="132.3" Height="56.7" Text="Утверждена&#13;&#10;Постановлением&#13;&#10;Госкомстата России&#13;&#10;от 25.12.98 N 132" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
     </ReportTitleBand>
-    <DataBand Name="Data1" Top="884.18" Width="718.2" Height="2041.2" DataSource="JsonConnection">
+    <DataBand Name="Data1" Top="885.25" Width="718.2" Height="18.9" DataSource="Data">
       <TableObject Name="Table3" Left="18.9" Width="567" Height="18.9" CanBreak="false" RepeatHeaders="false" Layout="Wrapped">
         <TableColumn Name="Column24" Width="75.6"/>
         <TableColumn Name="Column25" Width="75.6"/>
@@ -122,17 +95,17 @@ namespace FastReport
         <TableColumn Name="Column30"/>
         <TableColumn Name="Column31"/>
         <TableRow Name="Row16">
-          <TableCell Name="Cell202" Border.Lines="All" Text="[JSON.item.JsonConnection.item.Date]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
-          <TableCell Name="Cell203" Border.Lines="All" Text="[JSON.item.JsonConnection.item.Number]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
-          <TableCell Name="Cell204" Border.Lines="All" Text="[JSON.item.JsonConnection.item.Description]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
-          <TableCell Name="Cell205" Border.Lines="All" Text="[JSON.item.JsonConnection.item.Arrival]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
-          <TableCell Name="Cell206" Border.Lines="All" Text="[JSON.item.JsonConnection.item.Rate]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
-          <TableCell Name="Cell207" Border.Lines="All" Text="[JSON.item.JsonConnection.item.Remainder]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          <TableCell Name="Cell202" Border.Lines="All" Text="[JSON.item.Data.item.Date]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          <TableCell Name="Cell203" Border.Lines="All" Text="[JSON.item.Data.item.Number]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          <TableCell Name="Cell204" Border.Lines="All" Text="[JSON.item.Data.item.Description]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          <TableCell Name="Cell205" Border.Lines="All" Text="[JSON.item.Data.item.Arrival]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          <TableCell Name="Cell206" Border.Lines="All" Text="[JSON.item.Data.item.Rate]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          <TableCell Name="Cell207" Border.Lines="All" Text="[JSON.item.Data.item.Remainder]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
           <TableCell Name="Cell208" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
-          <TableCell Name="Cell209" Border.Lines="All" Text="[JSON.item.JsonConnection.item.FIO]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          <TableCell Name="Cell209" Border.Lines="All" Text="[JSON.item.Data.item.FIO]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
         </TableRow>
       </TableObject>
-      <DataHeaderBand Name="DataHeader1" Top="78.27" Width="718.2" Height="803.25">
+      <DataHeaderBand Name="DataHeader1" Top="78.8" Width="718.2" Height="803.25">
         <TableObject Name="Table2" Printable="false" Left="18.9" Top="727.65" Width="567" Height="75.6" RepeatHeaders="false" Layout="Wrapped">
           <TableColumn Name="Column16" Width="75.6"/>
           <TableColumn Name="Column17" Width="75.6"/>
@@ -319,6 +292,6 @@ namespace FastReport
         <TextObject Name="Text118" Left="396.9" Top="689.85" Width="18.9" Height="18.9" Text="г." HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
       </DataHeaderBand>
     </DataBand>
-    <PageFooterBand Name="PageFooter1" Top="2928.05" Width="718.2" Height="18.9"/>
+    <PageFooterBand Name="PageFooter1" Top="907.35" Width="718.2" Height="18.9"/>
   </ReportPage>
 </Report>
