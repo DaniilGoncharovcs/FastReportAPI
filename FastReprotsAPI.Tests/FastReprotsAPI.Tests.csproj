@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FastReportAPI\FastReportAPI.csproj" />
+    <ProjectReference Include="..\FastReportAPI\FastReportAPI.Server.csproj" />
   </ItemGroup>
 
 </Project>

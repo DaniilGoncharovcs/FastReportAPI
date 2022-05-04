@@ -15,10 +15,14 @@ public class FastReportService : IFastReportService
 
             foreach(var parametr in json)
                 report.SetParameterValue(parametr.Key, parametr.Value);
-            
-            dynamic dyn = json["Data"];
-            var conn = "Json={\"Data\":";
-            report.Dictionary.Connections[0].ConnectionString = $"{conn}{Convert.ToString(dyn)}}}";
+
+            bool hasTableData = json.ContainsKey("Data");
+            if(hasTableData)
+            {
+                dynamic dyn = json["Data"];
+                var conn = "Json={\"Data\":";
+                report.Dictionary.Connections[0].ConnectionString = $"{conn}{Convert.ToString(dyn)}}}";
+            }
             
             report.Prepare();
 

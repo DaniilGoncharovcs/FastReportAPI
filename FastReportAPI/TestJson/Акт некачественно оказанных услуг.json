@@ -1,0 +1,31 @@
+{
+  "Date": "21 04",
+  "Year": "21",
+  "EndDate": "21.04",
+  "EndYear": "22",
+  "Number": "21",
+  "Street": "Ленина",
+  "Provider": "Поставщик",
+  "Organization": "Заказчик",
+  "Owner": "Иванов И.И.",
+  "Data": [
+    {
+      "Number": "1",
+      "Name": "Газ",
+      "Measure": "куб.м",
+      "Standart": 1000,
+      "Fact": 500,
+      "Start": "20.04.2022",
+      "End": "27.04.2022"
+    },
+    {
+      "Number": "2",
+      "Name": "Газ",
+      "Measure": "куб.м",
+      "Standart": 1000,
+      "Fact": 500,
+      "Start": "20.04.2022",
+      "End": "27.04.2022"
+    }
+  ]
+} 

@@ -1,0 +1,21 @@
+{
+  "Day": "15",
+  "Month": "04",
+  "Year": "22",
+  "Organization": "Название",
+  "OrganizationPosition": "Позиция",
+  "Owner": "Иванов И.И.",
+  "Address": "ул. Ленина 24/2",
+  "InspectorPost": "Должность",
+  "InspectorFio": "Васильев В.В.",
+  "ConsumerFio": "Петров П.П.",
+  "ResourceFio": "Орлов О.О.",
+  "Hours": "12",
+  "Minutes": "30",
+  "Service": "отоплению квартиры",
+  "Cause": "средней комнатной температуры",
+  "Flat": "12",
+  "House": "24",
+  "Street": "Ленина",
+  "City": "Москва"
+}

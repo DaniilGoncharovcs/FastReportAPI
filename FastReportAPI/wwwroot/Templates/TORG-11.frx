@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="01/28/2021 16:14:18" ReportInfo.Modified="05/04/2022 10:52:36" ReportInfo.CreatorVersion="2022.2.6.0">
+  <Dictionary>
+    <JsonDataSourceConnection Name="Connection" ConnectionString="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">
+      <JsonTableDataSource Name="JSON" DataType="FastReport.Data.JsonConnection.JsonParser.JsonArray" Enabled="true" TableName="JSON">
+        <Column Name="index" DataType="System.Int32"/>
+        <Column Name="item" DataType="FastReport.JsonBase">
+          <Column Name="Organization" DataType="System.String"/>
+          <Column Name="OrganizationPhone" DataType="System.String"/>
+          <Column Name="OKPO" DataType="System.String"/>
+          <Column Name="OKDP" DataType="System.String"/>
+          <Column Name="OperationType" DataType="System.String"/>
+          <Column Name="Day" DataType="System.String"/>
+          <Column Name="Month" DataType="System.String"/>
+          <Column Name="Year" DataType="System.String"/>
+          <Column Name="Number" DataType="System.String"/>
+          <Column Name="Date" DataType="System.String"/>
+          <Column Name="Count" DataType="System.String"/>
+          <Column Name="FirstPost" DataType="System.String"/>
+          <Column Name="FirstFIO" DataType="System.String"/>
+          <Column Name="SecondPost" DataType="System.String"/>
+          <Column Name="SecondFIO" DataType="System.String"/>
+          <JsonTableDataSource Name="Data" DataType="FastReport.JsonBase" Enabled="true">
+            <Column Name="index" DataType="System.Int32"/>
+            <Column Name="item" DataType="FastReport.JsonBase">
+              <Column Name="ProductName" DataType="System.String"/>
+              <Column Name="Code" DataType="System.String"/>
+              <Column Name="UnitName" DataType="System.String"/>
+              <Column Name="OKEI" DataType="System.String"/>
+              <Column Name="Articul" DataType="System.String"/>
+              <Column Name="Sort" DataType="System.String"/>
+              <Column Name="Size" DataType="System.String"/>
+              <Column Name="Fullness" DataType="System.String"/>
+              <Column Name="Model" DataType="System.String"/>
+              <Column Name="ColorAndTypeTop" DataType="System.String"/>
+              <Column Name="Fason" DataType="System.String"/>
+              <Column Name="Quantity" DataType="System.String"/>
+              <Column Name="Price" DataType="System.String"/>
+            </Column>
+            <Column Name="array" DataType="FastReport.JsonBase"/>
+          </JsonTableDataSource>
+        </Column>
+        <Column Name="array" DataType="FastReport.JsonBase"/>
+      </JsonTableDataSource>
+    </JsonDataSourceConnection>
+    <Parameter Name="Organization" DataType="System.String"/>
+    <Parameter Name="OrganizationPhone" DataType="System.String"/>
+    <Parameter Name="OKPO" DataType="System.String"/>
+    <Parameter Name="OKDP" DataType="System.String"/>
+    <Parameter Name="OperationType" DataType="System.String"/>
+    <Parameter Name="Day" DataType="System.String"/>
+    <Parameter Name="Month" DataType="System.String"/>
+    <Parameter Name="Year" DataType="System.String"/>
+    <Parameter Name="Number" DataType="System.String"/>
+    <Parameter Name="Date" DataType="System.String"/>
+    <Parameter Name="Count" DataType="System.String"/>
+    <Parameter Name="FirstPost" DataType="System.String"/>
+    <Parameter Name="SecondPost" DataType="System.String"/>
+    <Parameter Name="FirstFIO" DataType="System.String"/>
+    <Parameter Name="SecondFIO" DataType="System.String"/>
+  </Dictionary>
+  <ReportPage Name="Page1" RawPaperSize="9" FirstPageSource="15" OtherPagesSource="15" LastPageSource="15" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="75.6">
+      <TextObject Name="Text1" Left="481.95" Width="226.8" Height="18.9" Text="Унифицированная форма N ТОРГ-11" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text2" Left="576.45" Top="18.9" Width="132.3" Height="56.7" Text="Утверждена&#13;&#10;Постановлением&#13;&#10;Госкомстата России&#13;&#10;от 25.12.98 N 132" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+    </ReportTitleBand>
+    <DataBand Name="Data1" Top="452.15" Width="718.2" Height="18.9" DataSource="Data">
+      <TableObject Name="Table6" Left="9.45" Width="699.3" Height="18.9">
+        <TableColumn Name="Column56" Width="94.5"/>
+        <TableColumn Name="Column57" Width="28.35"/>
+        <TableColumn Name="Column58" Width="56.7"/>
+        <TableColumn Name="Column59" Width="47.25"/>
+        <TableColumn Name="Column60"/>
+        <TableColumn Name="Column61" Width="37.8"/>
+        <TableColumn Name="Column62" Width="56.7"/>
+        <TableColumn Name="Column63" Width="28.35"/>
+        <TableColumn Name="Column64" Width="28.35"/>
+        <TableColumn Name="Column65" Width="28.35"/>
+        <TableColumn Name="Column66" Width="28.35"/>
+        <TableColumn Name="Column67" Width="28.35"/>
+        <TableColumn Name="Column68" Width="28.35"/>
+        <TableColumn Name="Column69" Width="28.35"/>
+        <TableColumn Name="Column70" Width="47.25"/>
+        <TableColumn Name="Column71"/>
+        <TableRow Name="Row75">
+          <TableCell Name="Cell782" Border.Lines="All" Text="[JSON.item.Data.item.ProductName]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          <TableCell Name="Cell783" Border.Lines="All" Text="[JSON.item.Data.item.Code]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          <TableCell Name="Cell784" Border.Lines="All" Text="[JSON.item.Data.item.UnitName]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          <TableCell Name="Cell785" Border.Lines="All" Text="[JSON.item.Data.item.OKEI]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          <TableCell Name="Cell786" Border.Lines="All" Text="[JSON.item.Data.item.Articul]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          <TableCell Name="Cell834" Border.Lines="All" Text="[JSON.item.Data.item.Sort]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          <TableCell Name="Cell835" Border.Lines="All" Text="[JSON.item.Data.item.Size]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          <TableCell Name="Cell836" Border.Lines="All" Text="[JSON.item.Data.item.Fullness]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          <TableCell Name="Cell837" Border.Lines="All" Text="[JSON.item.Data.item.Model]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          <TableCell Name="Cell838" Border.Lines="All" Text="[JSON.item.Data.item.ColorAndTypeTop]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          <TableCell Name="Cell839" Border.Lines="All" Text="[JSON.item.Data.item.Fason]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          <TableCell Name="Cell840" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          <TableCell Name="Cell841" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          <TableCell Name="Cell842" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          <TableCell Name="Cell843" Border.Lines="All" Text="[JSON.item.Data.item.Quantity]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          <TableCell Name="Cell844" Border.Lines="All" Text="[JSON.item.Data.item.Price]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+        </TableRow>
+      </TableObject>
+      <DataHeaderBand Name="DataHeader1" Top="79.6" Width="718.2" Height="368.55">
+        <TableObject Name="Table1" Left="491.4" Width="85.05" Height="132.3">
+          <TableColumn Name="Column1" Width="28.35"/>
+          <TableColumn Name="Column31" Width="28.35"/>
+          <TableColumn Name="Column32" Width="28.35"/>
+          <TableRow Name="Row1">
+            <TableCell Name="Cell1" Border.Lines="All" Text="Код" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt" ColSpan="3"/>
+            <TableCell Name="Cell279" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell280" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          </TableRow>
+          <TableRow Name="Row2">
+            <TableCell Name="Cell6" Border.Lines="All" Text="0330211" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt" ColSpan="3"/>
+            <TableCell Name="Cell281" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell282" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          </TableRow>
+          <TableRow Name="Row3">
+            <TableCell Name="Cell11" Border.Lines="All" Text="[OKPO]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt" ColSpan="3"/>
+            <TableCell Name="Cell283" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell284" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          </TableRow>
+          <TableRow Name="Row4">
+            <TableCell Name="Cell16" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt" ColSpan="3"/>
+            <TableCell Name="Cell285" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell286" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          </TableRow>
+          <TableRow Name="Row5">
+            <TableCell Name="Cell21" Border.Lines="All" Text="[OKDP]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt" ColSpan="3"/>
+            <TableCell Name="Cell287" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell288" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          </TableRow>
+          <TableRow Name="Row27">
+            <TableCell Name="Cell437" Border.Lines="All" Text="[OperationType]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt" ColSpan="3"/>
+            <TableCell Name="Cell438" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell439" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          </TableRow>
+          <TableRow Name="Row72">
+            <TableCell Name="Cell769" Border.Lines="All" Text="[Day]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell770" Border.Lines="All" Text="[Month]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell771" Border.Lines="All" Text="[Year]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          </TableRow>
+        </TableObject>
+        <TextObject Name="Text4" Left="425.25" Top="37.8" Width="66.15" Height="18.9" Text="по ОКПО" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+        <LineObject Name="Line1" Left="425.25" Top="56.7" Width="-425.25" Diagonal="true"/>
+        <TextObject Name="Text5" Top="56.7" Width="425.25" Height="9.45" Text="организация, адрес, номер телефона" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 8pt"/>
+        <TextObject Name="Text7" Left="47.25" Top="75.6" Width="207.9" Height="9.45" Text="структурное подразделение" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 8pt"/>
+        <TextObject Name="Text275" Left="302.4" Top="75.6" Width="198.45" Height="18.9" Text=" Вид деятельности по &quot;ОКДП&quot;" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+        <TextObject Name="Text284" Left="396.9" Top="94.5" Width="94.5" Height="18.9" Text="Вид операции" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+        <TextObject Name="Text318" Left="349.65" Top="113.4" Width="141.75" Height="18.9" Text="Дата инвентаризации" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+        <TableObject Name="Table5" Left="396.9" Top="160.65" Width="179.51" Height="56.7" Border.Lines="All">
+          <TableColumn Name="Column54" Width="94.47"/>
+          <TableColumn Name="Column55" Width="85.04"/>
+          <TableRow Name="Row49" Height="37.8">
+            <TableCell Name="Cell620" Border.Lines="All" Text=" Номер документа" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell621" Border.Lines="All" Text="Дата составления" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          </TableRow>
+          <TableRow Name="Row50">
+            <TableCell Name="Cell625" Border.Lines="All" Text="[Number]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell626" Border.Lines="All" Text="[Date]" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          </TableRow>
+        </TableObject>
+        <TextObject Name="Text285" Top="189" Width="453.6" Height="18.9" Text="ТОВАРНЫЙ ЯРЛЫК" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+        <TextObject Name="Text3" Left="377.35" Top="235.85" Width="113.4" Height="18.9" Text="Форма по ОКУД" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+        <TableObject Name="Table7" Left="9.45" Top="274.05" Width="699.3" Height="94.5">
+          <TableColumn Name="Column72" Width="94.5"/>
+          <TableColumn Name="Column73" Width="28.35"/>
+          <TableColumn Name="Column74" Width="56.7"/>
+          <TableColumn Name="Column75" Width="47.25"/>
+          <TableColumn Name="Column76"/>
+          <TableColumn Name="Column77" Width="37.8"/>
+          <TableColumn Name="Column78" Width="56.7"/>
+          <TableColumn Name="Column79" Width="28.35"/>
+          <TableColumn Name="Column80" Width="28.35"/>
+          <TableColumn Name="Column81" Width="28.35"/>
+          <TableColumn Name="Column82" Width="28.35"/>
+          <TableColumn Name="Column83" Width="28.35"/>
+          <TableColumn Name="Column84" Width="28.35"/>
+          <TableColumn Name="Column85" Width="28.35"/>
+          <TableColumn Name="Column86" Width="47.25"/>
+          <TableColumn Name="Column87"/>
+          <TableRow Name="Row81" Height="47.25">
+            <TableCell Name="Cell900" Border.Lines="All" Text="Товар" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt" ColSpan="2"/>
+            <TableCell Name="Cell901" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell902" Border.Lines="All" Text="Единица измерения" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt" ColSpan="2"/>
+            <TableCell Name="Cell903" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell904" Border.Lines="All" Text="Артикул товара" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt" RowSpan="2"/>
+            <TableCell Name="Cell905" Border.Lines="All" Text="Сорт" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt" RowSpan="2"/>
+            <TableCell Name="Cell906" Border.Lines="All" Text="Размер, рост" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt" RowSpan="2"/>
+            <TableCell Name="Cell907" Border.Lines="All" Text="Полнота, модель, цвет и вид верха, артикул ткани (колодки), фасон" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt" ColSpan="7"/>
+            <TableCell Name="Cell908" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell909" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell910" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell911" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell912" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell913" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell914" Border.Lines="All" Text="Количество" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt" RowSpan="2"/>
+            <TableCell Name="Cell915" Border.Lines="All" Text="Учетная цена, руб. коп." HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt" RowSpan="2"/>
+          </TableRow>
+          <TableRow Name="Row82" Height="47.25">
+            <TableCell Name="Cell916" Border.Lines="All" Text="наименование" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell917" Border.Lines="All" Text="код" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell918" Border.Lines="All" Text="наиме- нова- ние" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell919" Border.Lines="All" Text="код по ОКЕИ" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell920" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell921" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell922" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell923" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell924" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell925" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell926" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell927" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell928" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell929" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell930" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell931" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          </TableRow>
+        </TableObject>
+        <TextObject Name="Text326" Top="37.8" Width="226.8" Height="18.9" Text="[Organization]" Font="Arial, 10pt"/>
+        <TextObject Name="Text327" Left="226.8" Top="37.8" Width="198.45" Height="18.9" Text="[OrganizationPhone]" Font="Arial, 10pt"/>
+      </DataHeaderBand>
+      <DataFooterBand Name="DataFooter1" Top="475.05" Width="718.2" Height="207.9">
+        <LineObject Name="Line24" Left="122.85" Top="189" Width="132.3" Diagonal="true"/>
+        <LineObject Name="Line25" Left="274.05" Top="189" Width="103.95" Diagonal="true"/>
+        <LineObject Name="Line26" Left="396.9" Top="189" Width="141.75" Diagonal="true"/>
+        <TextObject Name="Text320" Left="122.85" Top="189" Width="132.3" Height="18.9" Text="должность" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+        <TextObject Name="Text321" Left="274.05" Top="189" Width="103.95" Height="18.9" Text="подпись&#13;&#10;" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+        <TextObject Name="Text322" Left="396.9" Top="189" Width="141.75" Height="18.9" Text="расшифровка подписи" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+        <LineObject Name="Line27" Left="122.85" Top="151.2" Width="132.3" Diagonal="true"/>
+        <LineObject Name="Line28" Left="274.05" Top="151.2" Width="103.95" Diagonal="true"/>
+        <LineObject Name="Line29" Left="396.9" Top="151.2" Width="141.75" Diagonal="true"/>
+        <TextObject Name="Text323" Left="122.85" Top="151.2" Width="132.3" Height="18.9" Text="должность" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+        <TextObject Name="Text324" Left="274.05" Top="151.2" Width="103.95" Height="18.9" Text="подпись&#13;&#10;" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+        <TextObject Name="Text325" Left="396.9" Top="151.2" Width="141.75" Height="18.9" Text="расшифровка подписи" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+        <TextObject Name="Text319" Left="9.45" Top="94.5" Width="103.95" Height="56.7" Text="Заведующий&#13;&#10;структурным&#13;&#10;подразделением" VertAlign="Center" Font="Times New Roman, 10pt"/>
+        <TextObject Name="Text314" Left="9.45" Top="66.15" Width="179.55" Height="18.9" Text="Товар по ярлыку проверен:" VertAlign="Bottom" Font="Times New Roman, 10pt"/>
+        <LineObject Name="Line19" Left="132.3" Top="56.7" Width="368.55" Diagonal="true"/>
+        <TextObject Name="Text308" Left="132.3" Top="56.7" Width="368.55" Height="9.45" Text="прописью" HorzAlign="Center" VertAlign="Bottom" Font="Times New Roman, 8pt"/>
+        <TextObject Name="Text305" Left="9.45" Top="37.8" Width="122.85" Height="18.9" Text="Количество товара" HorzAlign="Right" VertAlign="Center" Font="Times New Roman, 10pt"/>
+        <TextObject Name="Text328" Left="132.3" Top="37.8" Width="368.55" Height="18.9" Text="[Count]" Font="Arial, 10pt"/>
+        <TextObject Name="Text329" Left="122.85" Top="132.3" Width="132.3" Height="18.9" Text="[FirstPost]" Font="Arial, 10pt"/>
+        <TextObject Name="Text330" Left="122.85" Top="170.1" Width="132.3" Height="18.9" Text="[SecondPost]" Font="Arial, 10pt"/>
+        <TextObject Name="Text331" Left="396.9" Top="132.3" Width="141.75" Height="18.9" Text="[FirstFIO]" Font="Arial, 10pt"/>
+        <TextObject Name="Text332" Left="396.9" Top="170.1" Width="141.75" Height="18.9" Text="[SecondFIO]" Font="Arial, 10pt"/>
+        <TableObject Name="Table8" Left="9.45" Width="699.3" Height="18.9">
+          <TableColumn Name="Column88" Width="94.5"/>
+          <TableColumn Name="Column89" Width="28.35"/>
+          <TableColumn Name="Column90" Width="56.7"/>
+          <TableColumn Name="Column91" Width="47.25"/>
+          <TableColumn Name="Column92"/>
+          <TableColumn Name="Column93" Width="37.8"/>
+          <TableColumn Name="Column94" Width="56.7"/>
+          <TableColumn Name="Column95" Width="28.35"/>
+          <TableColumn Name="Column96" Width="28.35"/>
+          <TableColumn Name="Column97" Width="28.35"/>
+          <TableColumn Name="Column98" Width="28.35"/>
+          <TableColumn Name="Column99" Width="28.35"/>
+          <TableColumn Name="Column100" Width="28.35"/>
+          <TableColumn Name="Column101" Width="28.35"/>
+          <TableColumn Name="Column102" Width="47.25"/>
+          <TableColumn Name="Column103"/>
+          <TableRow Name="Row85">
+            <TableCell Name="Cell964" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell965" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell966" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell967" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell968" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell969" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell970" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell971" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell972" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell973" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell974" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell975" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell976" Text="Итого" HorzAlign="Right" VertAlign="Center" Font="Times New Roman, 10pt" ColSpan="2"/>
+            <TableCell Name="Cell977" HorzAlign="Right" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell978" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+            <TableCell Name="Cell979" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+          </TableRow>
+        </TableObject>
+      </DataFooterBand>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="686.95" Width="718.2" Height="37.8"/>
+  </ReportPage>
+</Report>

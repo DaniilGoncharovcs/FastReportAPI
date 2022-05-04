@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastReportAPI", "FastReportAPI\FastReportAPI.csproj", "{FBDAFA3B-519A-444F-BFD5-0EEFC2065A11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastReportAPI.Server", "FastReportAPI\FastReportAPI.Server.csproj", "{FBDAFA3B-519A-444F-BFD5-0EEFC2065A11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastReprotsAPI.Tests", "FastReprotsAPI.Tests\FastReprotsAPI.Tests.csproj", "{C3A33E2D-6801-4857-BF5D-D4B0886EC620}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastReprotsAPI.Tests", "FastReprotsAPI.Tests\FastReprotsAPI.Tests.csproj", "{C3A33E2D-6801-4857-BF5D-D4B0886EC620}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastReportAPI.Client", "FastReportAPI.Client\FastReportAPI.Client.csproj", "{B3B6AC94-C408-4B04-94E2-1AD4760B02DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{C3A33E2D-6801-4857-BF5D-D4B0886EC620}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3A33E2D-6801-4857-BF5D-D4B0886EC620}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3A33E2D-6801-4857-BF5D-D4B0886EC620}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3B6AC94-C408-4B04-94E2-1AD4760B02DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3B6AC94-C408-4B04-94E2-1AD4760B02DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3B6AC94-C408-4B04-94E2-1AD4760B02DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3B6AC94-C408-4B04-94E2-1AD4760B02DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

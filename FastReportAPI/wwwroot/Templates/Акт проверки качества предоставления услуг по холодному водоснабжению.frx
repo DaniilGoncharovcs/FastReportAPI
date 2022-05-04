@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="12/07/2021 12:48:46" ReportInfo.Modified="04/29/2022 10:21:17" ReportInfo.CreatorVersion="2022.2.6.0">
+  <Dictionary>
+    <Parameter Name="ResourcesPost" DataType="System.String"/>
+    <Parameter Name="ResourcesFIO" DataType="System.String"/>
+    <Parameter Name="ManagerPost" DataType="System.String"/>
+    <Parameter Name="ManagerFIO" DataType="System.String"/>
+    <Parameter Name="ConsumerFIO" DataType="System.String"/>
+    <Parameter Name="Date" DataType="System.String"/>
+    <Parameter Name="Time" DataType="System.String"/>
+    <Parameter Name="House" DataType="System.String"/>
+    <Parameter Name="Street" DataType="System.String"/>
+    <Parameter Name="Established" DataType="System.String"/>
+    <Parameter Name="Pressure" DataType="System.String"/>
+    <Parameter Name="Period" DataType="System.String"/>
+    <Parameter Name="Percent" DataType="System.String"/>
+    <Parameter Name="Bill" DataType="System.String"/>
+    <Parameter Name="Number" DataType="System.String"/>
+  </Dictionary>
+  <ReportPage Name="Page1" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="47.25">
+      <TextObject Name="Text1" Left="9.45" Top="9.45" Width="699.3" Height="37.8" Text="АКТ&#13;&#10;проверки качества предоставления услуг по холодному водоснабжению" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 12pt, style=Bold"/>
+    </ReportTitleBand>
+    <DataBand Name="Data1" Top="50.45" Width="718.2" Height="500.85">
+      <TextObject Name="Text2" Left="9.45" Top="9.45" Width="396.9" Height="18.9" Text="Комиссия для проверки качества коммунальных услуг в составе:" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text3" Left="9.45" Top="28.35" Width="321.3" Height="18.9" Text="1. Представитель ресурсоснабжающей организации" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <LineObject Name="Line1" Left="330.75" Top="47.25" Width="378" Diagonal="true"/>
+      <TextObject Name="Text4" Left="330.75" Top="47.25" Width="378" Height="9.45" Text="должность, Ф.И.О." HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 8pt"/>
+      <TextObject Name="Text5" Left="9.45" Top="56.7" Width="283.5" Height="18.9" Text="2. Представитель Управляющей организации" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <LineObject Name="Line2" Left="292.95" Top="75.6" Width="415.8" Diagonal="true"/>
+      <TextObject Name="Text6" Left="292.95" Top="75.6" Width="415.8" Height="9.45" Text="должность, Ф.И.О." HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 8pt"/>
+      <TextObject Name="Text7" Left="9.45" Top="85.05" Width="274.05" Height="18.9" Text="3. Представитель потребителя (жилец дома)" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <LineObject Name="Line3" Left="283.5" Top="103.95" Width="425.25" Diagonal="true"/>
+      <TextObject Name="Text8" Left="283.5" Top="103.95" Width="425.25" Height="18.9" Text="Ф.И.О." HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text9" Left="9.45" Top="122.85" Width="340.2" Height="18.9" Text="оформила настоящий акт о том, что на момент проверки" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <LineObject Name="Line4" Left="9.45" Top="160.65" Width="189" Diagonal="true"/>
+      <TextObject Name="Text10" Left="198.45" Top="141.75" Width="151.2" Height="18.9" Text="(дата, время) в доме №" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <LineObject Name="Line5" Left="349.65" Top="160.65" Width="37.8" Diagonal="true"/>
+      <TextObject Name="Text11" Left="387.45" Top="141.75" Width="28.35" Height="18.9" IsIntersectedWithOtherObject="true" Text="по" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text12" Left="9.45" Top="170.1" Width="47.25" Height="18.9" Text="улице" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <LineObject Name="Line6" Left="56.7" Top="189" Width="141.75" Diagonal="true"/>
+      <TextObject Name="Text13" Left="198.45" Top="170.1" Width="85.05" Height="18.9" Text="установлено:" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <LineObject Name="Line7" Left="283.5" Top="189" Width="425.25" Diagonal="true"/>
+      <LineObject Name="Line8" Left="9.45" Top="207.9" Width="699.3" Diagonal="true"/>
+      <TextObject Name="Text14" Left="9.45" Top="207.9" Width="160.65" Height="18.9" Text="Давление на вводе в дом:" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <LineObject Name="Line9" Left="170.1" Top="226.8" Width="538.65" Diagonal="true"/>
+      <TextObject Name="Text15" Left="9.45" Top="226.8" Width="198.45" Height="18.9" Text="За отсутствие холодной воды за период" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <LineObject Name="Line10" Left="207.9" Top="245.7" Width="141.75" Diagonal="true"/>
+      <TextObject Name="Text16" Left="349.65" Top="226.8" Width="207.9" Height="18.9" Text="суток будет сделан перерасчет на" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <LineObject Name="Line11" Left="557.55" Top="245.7" Width="94.5" Diagonal="true"/>
+      <TextObject Name="Text17" Left="652.05" Top="226.8" Width="18.9" Height="18.9" Text="%" HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text18" Left="9.45" Top="245.7" Width="56.7" Height="18.9" Text="за счет" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <LineObject Name="Line12" Left="66.15" Top="264.6" Width="585.9" Diagonal="true"/>
+      <TextObject Name="Text19" Left="9.45" Top="274.05" Width="567" Height="18.9" Text="Номер и тип применяемых средств измерений и данные о государственной метрологической&#13;&#10;" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text20" Left="9.45" Top="292.95" Width="56.7" Height="18.9" Text="поверке" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <LineObject Name="Line13" Left="66.15" Top="311.85" Width="595.35" Diagonal="true"/>
+      <TextObject Name="Text21" Left="9.45" Top="311.85" Width="132.3" Height="18.9" Text="1. Представитель УО" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <LineObject Name="Line14" Left="141.75" Top="330.75" Width="519.75" Diagonal="true"/>
+      <TextObject Name="Text22" Left="141.75" Top="330.75" Width="519.75" Height="9.45" Text="должность, Ф.И.О." HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 8pt"/>
+      <TextObject Name="Text23" Left="9.45" Top="340.2" Width="236.25" Height="18.9" Text="2. Представитель ресурсоснабжающей организации" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <LineObject Name="Line15" Left="245.7" Top="359.1" Width="444.15" Diagonal="true"/>
+      <TextObject Name="Text24" Left="245.7" Top="359.1" Width="444.15" Height="9.45" Text="должность, Ф.И.О." HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 8pt"/>
+      <TextObject Name="Text25" Left="9.45" Top="368.55" Width="274.05" Height="18.9" Text="3. Представитель потребителя (жилец дома)" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <LineObject Name="Line16" Left="283.5" Top="387.45" Width="425.25" Diagonal="true"/>
+      <TextObject Name="Text26" Left="283.5" Top="387.45" Width="425.25" Height="18.9" Text="Ф.И.О." HorzAlign="Center" VertAlign="Center" Font="Times New Roman, 10pt"/>
+      <TextObject Name="Text27" Left="330.75" Top="28.35" Width="179.55" Height="18.9" Text="[ResourcesPost]" Font="Arial, 10pt"/>
+      <TextObject Name="Text28" Left="510.3" Top="28.35" Width="198.45" Height="18.9" Text="[ResourcesFIO]" Font="Arial, 10pt"/>
+      <TextObject Name="Text29" Left="292.95" Top="56.7" Width="198.45" Height="18.9" Text="[ManagerPost]" Font="Arial, 10pt"/>
+      <TextObject Name="Text30" Left="491.4" Top="56.7" Width="217.35" Height="18.9" Text="[ManagerFIO]" Font="Arial, 10pt"/>
+      <TextObject Name="Text31" Left="283.5" Top="85.05" Width="425.25" Height="18.9" Text="[ConsumerFIO]" Font="Arial, 10pt"/>
+      <TextObject Name="Text32" Left="103.95" Top="141.75" Width="94.5" Height="18.9" Text="[Time]" Font="Arial, 10pt"/>
+      <TextObject Name="Text33" Left="9.45" Top="141.75" Width="94.5" Height="18.9" Text="[Date]" Font="Arial, 10pt"/>
+      <TextObject Name="Text34" Left="349.65" Top="141.75" Width="94.5" Height="18.9" IsIntersectedWithOtherObject="true" Text="[House]" Font="Arial, 10pt"/>
+      <TextObject Name="Text35" Left="56.7" Top="170.1" Width="141.75" Height="18.9" Text="[Street]" Font="Arial, 10pt"/>
+      <TextObject Name="Text36" Left="9.45" Top="189" Width="699.3" Height="18.9" Text="[Established]" Font="Arial, 10pt"/>
+      <TextObject Name="Text37" Left="170.1" Top="207.9" Width="538.65" Height="18.9" Text="[Pressure]" Font="Arial, 10pt"/>
+      <TextObject Name="Text38" Left="207.9" Top="226.8" Width="141.75" Height="18.9" Text="[Period]" Font="Arial, 10pt"/>
+      <TextObject Name="Text39" Left="557.55" Top="226.8" Width="94.5" Height="18.9" Text="[Percent]" Font="Arial, 10pt"/>
+      <TextObject Name="Text40" Left="66.15" Top="245.7" Width="585.9" Height="18.9" Text="[Bill]" Font="Arial, 10pt"/>
+      <TextObject Name="Text41" Left="66.15" Top="292.95" Width="595.35" Height="18.9" Text="[Number]" Font="Arial, 10pt"/>
+      <TextObject Name="Text42" Left="141.75" Top="311.85" Width="255.15" Height="18.9" Text="[ManagerPost]" Font="Arial, 10pt"/>
+      <TextObject Name="Text43" Left="472.5" Top="340.2" Width="217.35" Height="18.9" Text="[ResourcesFIO]" Font="Arial, 10pt"/>
+      <TextObject Name="Text44" Left="396.9" Top="311.85" Width="264.6" Height="18.9" Text="[ManagerFIO]" Font="Arial, 10pt"/>
+      <TextObject Name="Text45" Left="245.7" Top="340.2" Width="226.8" Height="18.9" Text="[ResourcesPost]" Font="Arial, 10pt"/>
+      <TextObject Name="Text46" Left="283.5" Top="368.55" Width="425.25" Height="18.9" Text="[ConsumerFIO]" Font="Arial, 10pt"/>
+    </DataBand>
+  </ReportPage>
+</Report>
