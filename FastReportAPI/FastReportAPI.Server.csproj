@@ -28,10 +28,6 @@
     <Folder Include="wwwroot\Files\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\FastReportAPI.Client\FastReportAPI.Client.csproj" />
-  </ItemGroup>
-
   <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
 
 </Project>
