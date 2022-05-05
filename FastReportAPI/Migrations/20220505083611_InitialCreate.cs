@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace FastReportAPI.Migrations
+namespace FastReportAPI.Server.Migrations
 {
     public partial class InitialCreate : Migration
     {

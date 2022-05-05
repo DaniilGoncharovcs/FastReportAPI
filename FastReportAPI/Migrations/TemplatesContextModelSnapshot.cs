@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace FastReportAPI.Migrations
+namespace FastReportAPI.Server.Migrations
 {
     [DbContext(typeof(TemplatesContext))]
     partial class TemplatesContextModelSnapshot : ModelSnapshot

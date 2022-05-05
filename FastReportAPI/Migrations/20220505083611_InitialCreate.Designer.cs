@@ -7,10 +7,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace FastReportAPI.Migrations
+namespace FastReportAPI.Server.Migrations
 {
     [DbContext(typeof(TemplatesContext))]
-    [Migration("20220418130554_InitialCreate")]
+    [Migration("20220505083611_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
