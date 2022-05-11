@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastReportAPI.Server", "Fas
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastReprotsAPI.Tests", "FastReprotsAPI.Tests\FastReprotsAPI.Tests.csproj", "{C3A33E2D-6801-4857-BF5D-D4B0886EC620}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastReportAPI.Client", "FastReportAPI.Client\FastReportAPI.Client.csproj", "{853CA322-ADC5-468F-9F99-397272F0D568}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C3A33E2D-6801-4857-BF5D-D4B0886EC620}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3A33E2D-6801-4857-BF5D-D4B0886EC620}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3A33E2D-6801-4857-BF5D-D4B0886EC620}.Release|Any CPU.Build.0 = Release|Any CPU
+		{853CA322-ADC5-468F-9F99-397272F0D568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{853CA322-ADC5-468F-9F99-397272F0D568}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{853CA322-ADC5-468F-9F99-397272F0D568}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{853CA322-ADC5-468F-9F99-397272F0D568}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

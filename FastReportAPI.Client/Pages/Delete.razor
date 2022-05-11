@@ -1,0 +1,34 @@
+﻿@page "/delete/{id:int}"
+@inject TemplatesClient Client
+@inject NavigationManager Manager
+@if(Template!=null){
+    <div class="grid">
+        <h3>Вы точно хотите удалить шаблон</h3>
+        <h4>@Template.Name</h4>
+        <div>
+            <button type="button" class="btn btn-success" @onclick="@(() => DeleteTemplate(@Template.Id))">Да</button>
+            <button type="button" class="btn btn-danger" @onclick="ReturnToIndex">Нет</button>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public int Id{ get; set; }
+    Template Template { get; set; }
+    protected override async Task OnInitializedAsync()
+        =>  Template = await Client.GetByIdAsync(Id);
+    async void DeleteTemplate(int id)
+    {
+        try
+        {
+            await Client.DeleteAsync(id);
+        }
+        catch (ApiException)
+        {
+            ReturnToIndex();
+        }
+    }
+    async void ReturnToIndex()
+        => Manager.NavigateTo("/");
+}

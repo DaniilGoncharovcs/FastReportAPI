@@ -1,0 +1,29 @@
+﻿@page "/create"
+@inject NavigationManager Manager
+@inject TemplatesClient Client
+
+<div class="grid">
+    <h3>Добавление шаблона:</h3>
+    <label>Имя</label>
+    <input class="form-control" type="text" @bind="@Name"/>
+    <button type="button" class="btn btn-primary"
+        @onclick="CreateTemplate">
+        Добавить шаблон
+    </button>
+</div>
+
+@code{
+    string Name { get; set; }
+    async void CreateTemplate()
+    {
+        var viewmodel = new TemplateViewModel { Name = Name };
+        try
+        {
+            await Client.PostAsync(viewmodel);
+        }
+        catch (ApiException)
+        {
+            Manager.NavigateTo("/");
+        }
+    }
+}

@@ -1,0 +1,12 @@
+﻿.grid {
+    display: grid;
+    width: 50%;
+    gap: 20px;
+}
+.grid div{
+    display:flex;
+    justify-content:space-between;
+}
+.grid div button {
+    width: 200px;
+}

@@ -1,0 +1,35 @@
+﻿@page "/{id:int}"
+@inject TemplatesClient Client
+@inject NavigationManager Manager
+@if(Template!=null){
+    <div class="grid">
+        <h3>Измение шаблона:</h3>
+        <h4>@Template.Name</h4>
+        <input class="form-control" type="text" @bind=@Template.Name/>
+        <button type="button" class="btn btn-primary"
+        @onclick="SaveChanges">
+            Сохранить изменения
+        </button>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public int Id{ get; set; }
+    Template Template { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        Template = await Client.GetByIdAsync(Id);
+    }
+    async void SaveChanges()
+    {
+        try
+        {
+            await Client.UpdateAsync(Id, new TemplateViewModel { Name = Template.Name });
+        }
+        catch(ApiException ex)
+        {
+            Manager.NavigateTo("/");
+        }
+    }
+}

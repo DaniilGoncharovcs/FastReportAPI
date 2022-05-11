@@ -1,0 +1,38 @@
+﻿.cont{
+    display:grid;
+    gap:50px;
+}
+.cont button{
+    width:200px;
+}
+a{
+    text-decoration:none;
+}
+h1{
+    text-align:center;
+}
+.grid{
+    display:grid;
+    grid-template-columns:4fr 4fr 4fr;
+    gap:50px;
+}
+.item {
+    display: grid;
+    grid-template-areas:
+        "h h"
+        "e d";
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid #ededed;
+}
+.item h5{
+    grid-area:h;
+}
+.item button:first-of-type{
+    grid-area:e;
+    height:50px;
+}
+.item button:last-of-type{
+    grid-area:d;
+    height:50px;
+}

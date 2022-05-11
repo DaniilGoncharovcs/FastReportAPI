@@ -8,3 +8,5 @@ global using FastReportAPI.Services;
 global using FastReport.Export;
 global using FastReport.Export.Html;
 global using FastReport.Export.PdfSimple;
+global using NSwag.AspNetCore;
+global using Microsoft.AspNetCore.Mvc.NewtonsoftJson;

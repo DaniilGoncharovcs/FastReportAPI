@@ -1,9 +1,40 @@
 ﻿@page "/"
+@inject TemplatesClient Client
+@inject NavigationManager Manager
 
-<PageTitle>Index</PageTitle>
+@if(Templates == null)
+{
+    <p>error : not found</p>
+}
+else
+{
+    <div class="cont">
+        <a href="/">
+            <h1>Список шаблонов</h1>
+        </a>
+        <button type="button" class="btn btn-primary" @onclick="CreateTemplate">Добавить шаблон</button>
+        <div class="grid">
+            @foreach(var template in Templates)
+            {
+                <div class="item">
+                    <h5>@template.Name</h5>
+                    <button type="button" class="btn btn-primary" @onclick="(() => EditTemplate(template.Id))">Изменить</button>
+                    <button type="button" class="btn btn-danger" @onclick="(() => DeleteTemplate(template.Id))">Удалить</button>
+                </div>
+            }
+        </div>
+    </div>
+}
 
-<h1>Hello, world!</h1>
+@code{
+    ICollection<Template> Templates{ get; set; }
+    protected override async Task OnInitializedAsync()
+        =>  Templates = await Client.GetAsync();
+    void CreateTemplate()
+        => Manager.NavigateTo($"/create");
+    void EditTemplate(int id)
+        =>  Manager.NavigateTo($"/{id}");
 
-Welcome to your new app.
-
-<SurveyPrompt Title="How is Blazor working for you?" />
+    void DeleteTemplate(int id)
+        =>  Manager.NavigateTo($"/delete/{id}");
+}
