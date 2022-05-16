@@ -7,7 +7,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages().AddNewtonsoftJson();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddHttpClient<TemplatesClient>(client =>
     client.BaseAddress = new Uri(builder.Configuration.GetSection("TemplatesApi").Value));
 var app = builder.Build();

@@ -1,0 +1,49 @@
+﻿@page "/export/{id:int}"
+@inject TemplatesClient Client
+@inject NavigationManager Manager
+@inject IJSRuntime JS
+@if(Template != null){
+    <div class="grid">
+    <h3>Экспорт шаблона:</h3>
+    <h4>@Template.Name</h4>
+    <label class="form-control">Введите данные JSON</label>
+    <input type="text" class="form-control" @bind="json"/>
+    <select @bind="format">
+        @foreach(var f in Enum.GetValues<ExportFormat>())
+        {
+            <option value="@f">@f</option>
+        }
+    </select>
+    <button type="button" class="btn btn-primary" @onclick="(() => ExportFormat(Id,json,format))">Скачать шаблон</button>
+</div>
+}
+
+@code{
+    [Parameter]
+    public int Id { get; set; }
+    Template Template { get; set; } = null;
+    string json = "";
+    ExportFormat format;
+
+    protected override async Task OnInitializedAsync()
+        => Template = await Client.GetByIdAsync(Id);
+
+    void ReturnToIndex()
+    => Manager.NavigateTo("/");
+
+    async Task ExportFormat(int id, string json, ExportFormat format)
+    {
+        var result= (FileResponse)await Client.ExportAsync(id, json, format);
+        var stream = result.Stream;
+        var fileStream = GetFileStream(stream);
+        var filename = $"{Template.Name}.pdf";
+        using var streamRef = new DotNetStreamReference(stream: fileStream);
+        await JS.InvokeVoidAsync("downloadFileFromStream", filename, streamRef);
+    }
+    Stream GetFileStream(Stream stream)
+    {
+        var memoryStream = new MemoryStream();
+        stream.CopyTo(memoryStream);
+        return memoryStream;
+    }
+}

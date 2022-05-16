@@ -12,7 +12,10 @@ else
         <a href="/">
             <h1>Список шаблонов</h1>
         </a>
-        <button type="button" class="btn btn-primary" @onclick="CreateTemplate">Добавить шаблон</button>
+        <div class="buttons">
+            <button type="button" class="btn btn-primary" @onclick="CreateTemplate">Добавить шаблон</button>
+            <button type="button" class="btn btn-primary" @onclick="UploadTemplate">Загрузить шаблон</button>
+        </div>
         <div class="grid">
             @foreach(var template in Templates)
             {
@@ -20,6 +23,7 @@ else
                     <h5>@template.Name</h5>
                     <button type="button" class="btn btn-primary" @onclick="(() => EditTemplate(template.Id))">Изменить</button>
                     <button type="button" class="btn btn-danger" @onclick="(() => DeleteTemplate(template.Id))">Удалить</button>
+                    <button type="button" class="btn btn-primary" @onclick="(() => ExportTemplate(template.Id))">Заполнить шаблон</button>
                 </div>
             }
         </div>
@@ -34,7 +38,10 @@ else
         => Manager.NavigateTo($"/create");
     void EditTemplate(int id)
         =>  Manager.NavigateTo($"/{id}");
-
     void DeleteTemplate(int id)
         =>  Manager.NavigateTo($"/delete/{id}");
+    void UploadTemplate()
+        => Manager.NavigateTo($"/upload");
+    void ExportTemplate(int id)
+        => Manager.NavigateTo($"/export/{id}");
 }
