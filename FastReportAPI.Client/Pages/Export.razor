@@ -35,15 +35,28 @@
     {
         var result= (FileResponse)await Client.ExportAsync(id, json, format);
         var stream = result.Stream;
-        var fileStream = GetFileStream(stream);
-        var filename = $"{Template.Name}.pdf";
-        using var streamRef = new DotNetStreamReference(stream: fileStream);
-        await JS.InvokeVoidAsync("downloadFileFromStream", filename, streamRef);
+
+        var bytes = GetFileStream(stream);
+
+        var fileName = $"{Template.Name}{GetFileType(format)}";
+
+        await JS.InvokeVoidAsync("BlazorDownloadFile",fileName,result.Headers["Content-Type"],bytes);
     }
-    Stream GetFileStream(Stream stream)
+    byte[] GetFileStream(Stream stream)
     {
         var memoryStream = new MemoryStream();
         stream.CopyTo(memoryStream);
-        return memoryStream;
+        return memoryStream.ToArray();
+    }
+    string GetFileType(ExportFormat format)
+    {
+        var result = string.Empty;
+        switch(format)
+        {
+            case Apis.ExportFormat.Pdf:
+                result = ".pdf";    
+                break;
+        }
+        return result;
     }
 }
