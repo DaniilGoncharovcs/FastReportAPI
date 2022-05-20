@@ -1,4 +1,6 @@
-﻿namespace FastReportAPI.Services;
+﻿using FastReport;
+
+namespace FastReportAPI.Services;
 public class FastReportService : IFastReportService
 {
     readonly IWebHostEnvironment _environment;
@@ -6,7 +8,7 @@ public class FastReportService : IFastReportService
     public FastReportService(IWebHostEnvironment environment)
         => _environment = environment;
 
-    public string FillReport(Dictionary<string, dynamic> json, string filename, ExportFormat format)
+    public string FillReport(Dictionary<string, dynamic> json, string filename, ExportFormat format, string imageFormat)
     {
         using (var report = new Report())
         {
@@ -25,22 +27,98 @@ public class FastReportService : IFastReportService
             }
             
             report.Prepare();
-
+            
+            var exportfile = new ExportBase();
+            
             switch (format)
             {
                 case ExportFormat.Pdf:
-                    PDFSimpleExport pdf = new PDFSimpleExport();
-                    filePath = Path.Combine($"{_environment.ContentRootPath}\\wwwroot\\Files\\{filename}{GetExprotFormat(format)}");
-                    pdf.Export(report, filePath);
-                    return filePath;
+                    exportfile = new PDFExport();
                     break;
                 case ExportFormat.Html:
-                    HTMLExport html = new HTMLExport();
-                    filePath = Path.Combine($"{_environment.ContentRootPath}\\wwwroot\\Files\\{filename}{GetExprotFormat(format)}");
-                    html.Export(report, filePath);
+                    var html = new HTMLExport();
+                    
                     break;
-                
+                case ExportFormat.Mht:
+                    exportfile = new MHTExport();
+                    break;
+                case ExportFormat.Image:
+                    exportfile = new ImageExport();
+                    break;
+                case ExportFormat.Biff8:
+                    exportfile = new Excel2003Document();
+                    break;
+                case ExportFormat.Csv:
+                    exportfile = new CSVExport();
+                    break;
+                case ExportFormat.Dbf:
+                    exportfile = new DBFExport();
+                    break;
+                case ExportFormat.Json:
+                    exportfile = new JsonExport();
+                    break;
+                case ExportFormat.LaTeX:
+                    exportfile = new LaTeXExport();
+                    break;
+                case ExportFormat.Odt:
+                    exportfile = new ODTExport();
+                    break;
+                case ExportFormat.Ods:
+                    exportfile = new ODSExport();
+                    break;
+                case ExportFormat.Docx:
+                    exportfile = new Word2007Export();
+                    break;
+                case ExportFormat.Pptx:
+                    exportfile = new PowerPoint2007Export();
+                    break;
+                case ExportFormat.Xlsx:
+                    exportfile = new Excel2007Export();
+                    break;
+                case ExportFormat.Xps:
+                    exportfile = new XPSExport();
+                    break;
+                case ExportFormat.Ppml:
+                    exportfile = new PPMLExport();
+                    break;
+                case ExportFormat.PS:
+                    exportfile = new PSExport();
+                    break;
+                case ExportFormat.Richtext:
+                    exportfile = new RTFExport();
+                    break;
+                case ExportFormat.Svg:
+                    exportfile = new SVGExport();
+                    break;
+                case ExportFormat.Text:
+                    exportfile = new TextExport();
+                    break;
+                case ExportFormat.Xaml:
+                    exportfile = new XAMLExport();
+                    break;
+                case ExportFormat.Xml:
+                    exportfile = new XMLExport();
+                    break;
+                case ExportFormat.Zpl:
+                    exportfile = new ZplExport();
+                    break;
             }
+            
+            filePath = Path.Combine($"{_environment.ContentRootPath}\\wwwroot\\Files\\{filename}{GetExprotFormat(format, imageFormat)}");
+            exportfile.Export(report, filePath);
+            /*if(format == ExportFormat.Html)
+            {
+                ZipFile.CreateFromDirectory($"{_environment.ContentRootPath}\\wwwroot\\Files\\{filename}", $"{_environment.ContentRootPath}\\wwwroot\\Files\\{filename}.zip");
+                using(var fs = new FileStream($"{_environment.ContentRootPath}\\wwwroot\\Files\\{filename}.zip", FileMode.Open))
+                {
+                    using(var archive = new ZipArchive(fs, ZipArchiveMode.Update))
+                    {
+                        archive.CreateEntry($"{_environment.ContentRootPath}\\wwwroot\\Files\\{filename}.html");
+                    }
+                }
+                filePath = $"{_environment.ContentRootPath}\\wwwroot\\Files\\{filename}.zip";
+            }*/
+            return filePath;
         }
         return "";
     }
@@ -53,7 +131,8 @@ public class FastReportService : IFastReportService
 
             case ExportFormat.Html:
                 return ".html";
-
+            case ExportFormat.Mht:
+                return ".mht";
             case ExportFormat.Image:
                 switch (expectedFormat)
                 {

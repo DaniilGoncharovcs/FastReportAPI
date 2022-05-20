@@ -118,5 +118,5 @@
     /// <summary>
     /// Export to e-mail
     /// </summary>
-    //Email,
+    Email,
 }

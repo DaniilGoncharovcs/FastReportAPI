@@ -76,7 +76,7 @@ public class TemplatesController : Controller
         return Ok("Upload Successful");
     }
     [HttpGet("[action]")]
-    public async Task<IActionResult> Export(int id, string dictionary, ExportFormat format)
+    public async Task<IActionResult> Export(int id, string dictionary, ExportFormat format, string imageDefaultFormat = "Png")
     {
         var template = await _context.Templates.FirstOrDefaultAsync(t => t.Id == id);
         if (template == null) return NotFound("Шаблона с таким id нет");
@@ -84,7 +84,7 @@ public class TemplatesController : Controller
         if (dictionary == null || format == null) return BadRequest("Не переданы параметры и/или формат выходного файла");
         
         var json = JsonConvert.DeserializeObject<Dictionary<string,dynamic>>(dictionary);
-        filePath = _fastReportService.FillReport(json,filePath,format);
+        filePath = _fastReportService.FillReport(json,filePath,format, imageDefaultFormat);
 
         var provider = new FileExtensionContentTypeProvider();
         if (!provider.TryGetContentType(filePath, out var contentType))
