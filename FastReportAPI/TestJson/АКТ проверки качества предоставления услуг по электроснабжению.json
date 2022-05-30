@@ -1,15 +1,15 @@
 {
-  "EnergyPost" : "должность",
-  "EnergyFIO": "Иванов И.И.",
-  "ManagerPost" : "должность",
-  "ManagerFIO": "Петров П.П.",
-  "ConsumerFIO": "Васильев В.В.",
+  "EnergyPost" : "post",
+  "EnergyFIO": "fio",
+  "ManagerPost" : "post",
+  "ManagerFIO": "fio",
+  "ConsumerFIO": "fio",
   "CheckDate": "27.04.2022",
   "CheckTime": "12:00-13:00",
   "House": "21",
-  "Street": "Ленина",
-  "Established": "установлено что отсутствует  электроснабжение в доме",
-  "Cause": "Оборвана ЛЭП",
+  "Street": "street",
+  "Established": "smt",
+  "Cause": "cause",
   "Percent": "1",
   "Bill": "123456764683"
 }

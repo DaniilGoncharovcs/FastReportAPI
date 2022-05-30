@@ -8,22 +8,33 @@
     <h4>@Template.Name</h4>
     <label class="form-control">Введите данные JSON</label>
     <input type="text" class="form-control" @bind="json"/>
-    <select @bind="format">
+    <select @bind="format" class="form-select">
         @foreach(var f in Enum.GetValues<ExportFormat>())
         {
             <option value="@f">@f</option>
         }
     </select>
-    <button type="button" class="btn btn-primary" @onclick="(() => ExportFormat(Id,json,format))">Скачать шаблон</button>
+        @if(format == Apis.ExportFormat.Image)
+        {
+            <select @bind="imageExportFormat" class="form-select">
+                @foreach(var f in Enum.GetValues<ImageExportFormat>())
+                {
+                    <option value="@f">@f</option>
+                }
+            </select>
+        }
+        <button type="button" class="btn btn-primary" @onclick="(() => ExportFormat(Id,json,format,imageExportFormat))">Скачать шаблон</button>
 </div>
 }
 
 @code{
+    
     [Parameter]
     public int Id { get; set; }
     Template Template { get; set; } = null;
     string json = "";
     ExportFormat format;
+    ImageExportFormat imageExportFormat;
 
     protected override async Task OnInitializedAsync()
         => Template = await Client.GetByIdAsync(Id);
@@ -31,9 +42,9 @@
     void ReturnToIndex()
     => Manager.NavigateTo("/");
 
-    async Task ExportFormat(int id, string json, ExportFormat format)
+    async Task ExportFormat(int id, string json, ExportFormat format, ImageExportFormat imageFormat)
     {
-        var result= (FileResponse)await Client.ExportAsync(id, json, format);
+        var result= (FileResponse)await Client.ExportAsync(id, json, format, imageFormat);
         var stream = result.Stream;
 
         var bytes = GetFileStream(stream);

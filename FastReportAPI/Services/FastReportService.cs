@@ -8,8 +8,9 @@ public class FastReportService : IFastReportService
     public FastReportService(IWebHostEnvironment environment)
         => _environment = environment;
 
-    public string FillReport(Dictionary<string, dynamic> json, string filename, ExportFormat format, string imageFormat)
+    public string FillReport(Dictionary<string, dynamic> json, string filename, ExportFormat format, ImageExportFormat imageExport)
     {
+        Config.WebMode = true;
         using (var report = new Report())
         {
             var filePath = Path.Combine($"{_environment.ContentRootPath}\\wwwroot\\Templates\\{filename}");
@@ -36,14 +37,31 @@ public class FastReportService : IFastReportService
                     exportfile = new PDFExport();
                     break;
                 case ExportFormat.Html:
-                    var html = new HTMLExport();
-                    
+                   using(var htmlExport = new HTMLExport())
+                    {
+                        htmlExport.Layers = false;
+                        htmlExport.SaveStreams = true;
+                        report.Export(htmlExport, (Stream)null);
+                        if(htmlExport.GeneratedFiles.Count > 0)
+                        {
+                            var archive = new FastReport.Utils.ZipArchive();
+                            for(var i = 0; i < htmlExport.GeneratedFiles.Count; i++)
+                            {
+                                archive.AddStream(htmlExport.GeneratedFiles[i], htmlExport.GeneratedStreams[i]);
+                                filePath = Path.Combine($"{_environment.ContentRootPath}\\wwwroot\\Files\\{filename}.zip");
+                                archive.SaveToFile(filePath);
+                            }
+                            return filePath;
+                        }
+                    }
                     break;
                 case ExportFormat.Mht:
                     exportfile = new MHTExport();
                     break;
                 case ExportFormat.Image:
-                    exportfile = new ImageExport();
+                    var image = new ImageExport();
+                    image.ImageFormat = imageExport;
+                    exportfile = image;
                     break;
                 case ExportFormat.Biff8:
                     exportfile = new Excel2003Document();
@@ -52,7 +70,9 @@ public class FastReportService : IFastReportService
                     exportfile = new CSVExport();
                     break;
                 case ExportFormat.Dbf:
-                    exportfile = new DBFExport();
+                    var dbf = new DBFExport();
+                    dbf.Encoding = System.Text.Encoding.UTF8;
+                    exportfile = dbf;
                     break;
                 case ExportFormat.Json:
                     exportfile = new JsonExport();
@@ -104,7 +124,7 @@ public class FastReportService : IFastReportService
                     break;
             }
             
-            filePath = Path.Combine($"{_environment.ContentRootPath}\\wwwroot\\Files\\{filename}{GetExprotFormat(format, imageFormat)}");
+            filePath = Path.Combine($"{_environment.ContentRootPath}\\wwwroot\\Files\\{filename}{GetExprotFormat(format, imageExport)}");
             exportfile.Export(report, filePath);
             /*if(format == ExportFormat.Html)
             {
@@ -122,7 +142,7 @@ public class FastReportService : IFastReportService
         }
         return "";
     }
-    private string GetExprotFormat(ExportFormat format, string expectedFormat = null)
+    private string GetExprotFormat(ExportFormat format, ImageExportFormat imageExport = ImageExportFormat.Png)
     {
         switch (format)
         {
@@ -134,24 +154,24 @@ public class FastReportService : IFastReportService
             case ExportFormat.Mht:
                 return ".mht";
             case ExportFormat.Image:
-                switch (expectedFormat)
+                switch (imageExport)
                 {
-                    case "Jpeg":
+                    case ImageExportFormat.Jpeg:
                         return ".jpeg";
 
-                    case "Png":
+                    case ImageExportFormat.Png:
                         return ".png";
 
-                    case "Gif":
+                    case ImageExportFormat.Gif:
                         return ".gif";
 
-                    case "Bmp":
+                    case ImageExportFormat.Bmp:
                         return ".bmp";
 
-                    case "Mtf":
+                    case ImageExportFormat.Metafile:
                         return ".mtf";
 
-                    case "Tiff":
+                    case ImageExportFormat.Tiff:
                         return ".tiff";
 
                     default:

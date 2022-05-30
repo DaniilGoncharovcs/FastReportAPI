@@ -28,4 +28,4 @@ global using FastReport.Export.Email;
 global using NSwag.AspNetCore;
 global using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
 global using System.IO.Compression;
-global using MoreZipFileExtensions;
+global using FastReport.Utils;
