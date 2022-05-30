@@ -1,0 +1,51 @@
+{
+  "Organization": "Organization",
+  "OrganizationPhone": "67856398",
+  "OKPO": "57446",
+  "OKDP": "5573",
+  "OperationType": "type",
+  "Day": "28",
+  "Month": "04",
+  "Year": "2022",
+  "Number": "534731",
+  "Date": "29.04.2022",
+  "Count": "cnt",
+  "FirstPost": "firstPost",
+  "FirstFIO": "firstFio",
+  "SecondPost": "secondPost",
+  "SecondFIO": "secondFIO",
+  "Data": [
+    {
+      "ProductName": "name",
+      "Code": "1",
+      "UnitName": "n1",
+      "OKEI": "1",
+      "Articul": "08f21",
+      "Sort": "s1",
+      "Size": "s1",
+      "Fullness": "f1",
+      "Model": "m1",
+      "ColorAndTypeTop": "c1",
+      "Articul": "86je",
+      "Fason": "f1",
+      "Quantity": "10",
+      "Price": "100"
+    },
+    {
+      "ProductName": "name2",
+      "Code": "2",
+      "UnitName": "u1",
+      "OKEI": "1",
+      "Articul": "08f21",
+      "Sort": "s1",
+      "Size": "s1",
+      "Fullness": "f1",
+      "Model": "m1",
+      "ColorAndTypeTop": "c1",
+      "Articul": "86je",
+      "Fason": "f1",
+      "Quantity": "10",
+      "Price": "100"
+    }
+  ]
+}

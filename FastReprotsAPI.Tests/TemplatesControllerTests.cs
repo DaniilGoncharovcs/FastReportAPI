@@ -1,23 +1,11 @@
-﻿using Castle.Core.Logging;
-using FastReportAPI.Controllers;
+﻿using FastReportAPI.Controllers;
 using FastReportAPI.Data;
 using FastReportAPI.Models;
-using FastReportAPI.Services;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-using Moq;
-using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Xunit;
-using System.Security.Cryptography;
 
 namespace FastReprotsAPI.Tests
 {
