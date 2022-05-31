@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FastReportAPI.Server.Migrations
 {
     [DbContext(typeof(TemplatesContext))]
-    [Migration("20220505083611_InitialCreate")]
+    [Migration("20220530091149_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -49,7 +49,7 @@
 
         var bytes = GetFileStream(stream);
 
-        var fileName = $"{Template.Name}{GetFileType(format)}";
+        var fileName = $"{Template.Name}";
 
         await JS.InvokeVoidAsync("BlazorDownloadFile",fileName,result.Headers["Content-Type"],bytes);
     }
@@ -58,16 +58,5 @@
         var memoryStream = new MemoryStream();
         stream.CopyTo(memoryStream);
         return memoryStream.ToArray();
-    }
-    string GetFileType(ExportFormat format)
-    {
-        var result = string.Empty;
-        switch(format)
-        {
-            case Apis.ExportFormat.Pdf:
-                result = ".pdf";    
-                break;
-        }
-        return result;
     }
 }
