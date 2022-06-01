@@ -9,19 +9,24 @@ public class TemplatesController : Controller
     readonly TemplatesContext _context;
     readonly IWebHostEnvironment _environment;
     readonly IFastReportService _fastReportService;
+
     public TemplatesController(TemplatesContext context, IWebHostEnvironment environment, IFastReportService service)
         => (_context,_environment,_fastReportService) = (context,environment,service);
 
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Template>>> Get()
         => Ok(await _context.Templates.ToListAsync());
+
     [HttpGet("{id}")]
     public async Task<ActionResult<Template>> GetById(int id)
     {
         var template = await _context.Templates.FirstOrDefaultAsync(t => t.Id == id);
+
         if (template == null) return NotFound("Пользователя с данным id нет");
+
         return Ok(template);
     }
+
     [HttpPost]
     
     public async Task<IActionResult> Post(TemplateViewModel template)
@@ -37,62 +42,99 @@ public class TemplatesController : Controller
             };
             await _context.AddAsync(dbtemplate);
             await _context.SaveChangesAsync();
+
             return NoContent();
         }
+
         return BadRequest();
     }
+
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, TemplateViewModel template)
     {
         var dbTemplate = await _context.Templates.FirstOrDefaultAsync(t => t.Id == id);
         if (dbTemplate == null) return NotFound("Такого шаблона нет");
+
         if (template != null && template.Name != null)
         {
             dbTemplate.Name = template.Name;
             await _context.SaveChangesAsync();
+
             return NoContent();
         }
+
         return BadRequest("Передан пустой шаблон");
     }
+
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id)
     {
         var dbTemplate = await _context.Templates.FirstOrDefaultAsync(t => t.Id == id);
         if (dbTemplate == null) return NotFound("Такого шаблона нет");
+
         _context.Templates.Remove(dbTemplate);
         await _context.SaveChangesAsync();
+
         return NoContent();
     }
+
     [HttpPost("[action]")]
     public async Task<IActionResult> UploadFile(IFormFile file)
     {
-        if (file == null) return BadRequest();
+        if (file == null || !file.FileName.Contains("frx")) return BadRequest("Файл отсутствует или у файла другое расширение");
+        
         string dir = Path.Combine($"{_environment.ContentRootPath}\\wwwroot\\Templates");
         string filePath = Path.Combine(dir, file.FileName);
+
         using (var stream = new FileStream(filePath, FileMode.Create))
         {
             file.CopyTo(stream);
         }
-        return Ok("Upload Successful");
+
+        return Ok("Загрузка произведена успешно");
     }
+
     [HttpGet("[action]")]
     public async Task<IActionResult> Export(int id, string dictionary, ExportFormat format, ImageExportFormat imageFormat)
     {
         var template = await _context.Templates.FirstOrDefaultAsync(t => t.Id == id);
         if (template == null) return NotFound("Шаблона с таким id нет");
+        
         var filePath = template.Name;
         if (dictionary == null || format == null) return BadRequest("Не переданы параметры и/или формат выходного файла");
-        
-        var json = JsonConvert.DeserializeObject<Dictionary<string,dynamic>>(dictionary);
-        filePath = _fastReportService.FillReport(json,filePath,format, imageFormat);
+
+        try
+        {
+            var json = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(dictionary);
+            filePath = _fastReportService.FillReport(json, filePath, format, imageFormat);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest("Данные введены некорректно");
+        }
 
         var provider = new FileExtensionContentTypeProvider();
         if (!provider.TryGetContentType(filePath, out var contentType))
         {
             contentType = "application/octet-stream";
         }
+
         var bytes = await System.IO.File.ReadAllBytesAsync(filePath);
+
         return File(bytes, contentType, Path.GetFileName(filePath));
     }
+
+    [HttpGet("[action]")]
+    public bool IsThereTheTemplate(string name)
+    {
+        var filename = $"{ _environment.ContentRootPath}\\wwwroot\\Templates\\{name}.frx";
     
+        string dirname = Path.Combine($"{_environment.ContentRootPath}\\wwwroot\\Templates");
+
+        var allfiles = Directory.EnumerateFiles(dirname);
+
+        if (allfiles.FirstOrDefault(f => f == filename) != null)
+            return true;
+        return false;
+    }
 }

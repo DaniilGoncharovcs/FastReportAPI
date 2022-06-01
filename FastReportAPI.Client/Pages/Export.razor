@@ -3,44 +3,61 @@
 @inject NavigationManager Manager
 @inject IJSRuntime JS
 @if(Template != null){
-    <div class="grid">
-    <h3>Экспорт шаблона:</h3>
-    <h4>@Template.Name</h4>
-    <label class="form-control">Введите данные JSON</label>
-    <input type="text" class="form-control" @bind="json"/>
-    <select @bind="format" class="form-select">
-        @foreach(var f in Enum.GetValues<ExportFormat>())
-        {
-            <option value="@f">@f</option>
-        }
-    </select>
-        @if(format == Apis.ExportFormat.Image)
-        {
-            <select @bind="imageExportFormat" class="form-select">
-                @foreach(var f in Enum.GetValues<ImageExportFormat>())
+    @if (hasTemplate)
+    {
+        <div class="grid">
+            <h3>Экспорт шаблона:</h3>
+            <h4>@Template.Name</h4>
+            <label class="form-control">Введите данные JSON</label>
+            <input type="text" class="form-control" @bind="json"/>
+            <select @bind="format" class="form-select">
+                @foreach(var f in Enum.GetValues<ExportFormat>())
                 {
                     <option value="@f">@f</option>
                 }
             </select>
-        }
-        <button type="button" class="btn btn-primary" @onclick="(() => ExportFormat(Id,json,format,imageExportFormat))">Скачать шаблон</button>
-</div>
+            @if(format == Apis.ExportFormat.Image)
+            {
+                <select @bind="imageExportFormat" class="form-select">
+                    @foreach(var f in Enum.GetValues<ImageExportFormat>())
+                    {
+                        <option value="@f">@f</option>
+                    }
+                </select>
+            }
+            <button type="button" class="btn btn-primary" @onclick="(() => ExportFormat(Id,json,format,imageExportFormat))">Скачать шаблон</button>
+        </div>
+    }
+    else
+    {
+        <div class="grid">
+            <h3>Экспорт шаблона @Template.Name невозжен т.к. отсутствует файл шаблона на сервере, сначала загрузите его</h3>
+            <button type="button" class="btn btn-primary" @onclick = "GoToUpload">Загрузить шаблон</button>
+        </div>
+    }
 }
 
 @code{
-    
+
     [Parameter]
     public int Id { get; set; }
     Template Template { get; set; } = null;
     string json = "";
     ExportFormat format;
     ImageExportFormat imageExportFormat;
+    bool hasTemplate;
 
     protected override async Task OnInitializedAsync()
-        => Template = await Client.GetByIdAsync(Id);
+    {
+        Template = await Client.GetByIdAsync(Id);
+        hasTemplate = await Client.IsThereTheTemplateAsync(Template.Name);
+    }
 
     void ReturnToIndex()
     => Manager.NavigateTo("/");
+
+    void GoToUpload()
+    => Manager.NavigateTo("/upload");
 
     async Task ExportFormat(int id, string json, ExportFormat format, ImageExportFormat imageFormat)
     {
@@ -52,6 +69,8 @@
         var fileName = $"{Template.Name}";
 
         await JS.InvokeVoidAsync("BlazorDownloadFile",fileName,result.Headers["Content-Type"],bytes);
+
+        ReturnToIndex();
     }
     byte[] GetFileStream(Stream stream)
     {

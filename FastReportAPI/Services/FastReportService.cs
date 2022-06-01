@@ -56,7 +56,9 @@ public class FastReportService : IFastReportService
                     }
                     break;
                 case ExportFormat.Mht:
-                    exportfile = new MHTExport();
+                    var mht = new MHTExport();
+                    mht.Pictures = false;
+                    exportfile = mht;
                     break;
                 case ExportFormat.Image:
                     var image = new ImageExport();
@@ -72,6 +74,7 @@ public class FastReportService : IFastReportService
                 case ExportFormat.Dbf:
                     var dbf = new DBFExport();
                     dbf.Encoding = System.Text.Encoding.UTF8;
+
                     exportfile = dbf;
                     break;
                 case ExportFormat.Json:
@@ -102,7 +105,9 @@ public class FastReportService : IFastReportService
                     exportfile = new PPMLExport();
                     break;
                 case ExportFormat.PS:
-                    exportfile = new PSExport();
+                    var ps = new PSExport();
+                    ps.TextInCurves = true;
+                    exportfile = ps;
                     break;
                 case ExportFormat.Richtext:
                     exportfile = new RTFExport();
