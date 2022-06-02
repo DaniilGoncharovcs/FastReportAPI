@@ -190,7 +190,7 @@ namespace FastReprotsAPI.Tests
 
             //Assert
 
-            Assert.IsType<BadRequestResult>(result);
+            Assert.IsType<BadRequestObjectResult>(result);
         }
         [Fact]
         public async Task ExportWithNonExistentId_ReturnsNotFoundObject()
@@ -202,7 +202,7 @@ namespace FastReprotsAPI.Tests
 
             //Act
 
-            var result = templatesController.Export(100,null,ExportFormat.Pdf).Result;
+            var result = templatesController.Export(100,null,ExportFormat.Pdf,FastReport.Export.Image.ImageExportFormat.Png).Result;
 
             //Assert
 
@@ -218,7 +218,7 @@ namespace FastReprotsAPI.Tests
 
             //Act
 
-            var result = templatesController.Export(1,null,ExportFormat.Pdf).Result;
+            var result = templatesController.Export(1,null,ExportFormat.Pdf,FastReport.Export.Image.ImageExportFormat.Png).Result;
 
             //Assert
 
